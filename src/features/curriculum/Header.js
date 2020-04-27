@@ -32,6 +32,7 @@ export default function Header () {
                 );
             })}
             </ul>
+            <hr className="headerLongerLine" />
         </header>
     );
 }
