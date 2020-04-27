@@ -24,7 +24,10 @@ export default function Header () {
             {contact && contact.map((con, id) => {
                 return (
                     <li key={id}>
-                        <a href={con.link} className={"icon " + con.icon_label}>{con.label}</a>
+                        <a href={con.link}>
+                            <span className={"icon " + con.icon_label}></span>
+                            <span className="label">{con.label}</span>
+                        </a>
                     </li>
                 );
             })}
