@@ -38,62 +38,52 @@
         }
     ],
     "sections": [
-        {"title": "Information", "anchor": "#information"},
-        {"title": "Introduction", "anchor": "#introduction"},
-        {"title": "Professional profile", "anchor": "#profile"},
-        {"title": "Areas of expertise", "anchor": "#expertise"},
-        {"title": "Professional experience", "anchor": "#experience"},
-        {"title": "Education", "anchor": "#education"},
-        {"title": "Scientific Software", "anchor": "#software"},
-        {"title": "Publications", "anchor": "#publications"},
-        {"title": "Presentations", "anchor": "#presentations"},
-        {"title": "Languages speak", "anchor": "#languages"},
-        {"title": "References", "anchor": "#references"}
-    ],
-    "introduction": {
-        "headline": "Front-end Web Engineer",
-        "paragraph": "As a Computer Science professor, stands as a passionate Web developer, lecturing development practices associated to Web technologies and Web engineering practices (such as: eXtreme Programming, TDD - Test-Driven Design, Continuous Integration and Continuous Delivery). Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintanability and multi-platform characteristic of the Web."
-    },
-    "profile": {
-        "headline": "Professional profile",
-        "paragraphs": [
-            {"paragraph": "Front-end developer experienced in the use of cutting edge technologies, with the objective of allowing rich interactions for users in the Web, exercising Web 2.0 and HTML5 core concepts."},
-            {"paragraph": "Specialist in Web Engineering practices such as Continuous Integration, Continuous Delivery and Test-Driven Design; for assuring the quality of large scale web projects."},
-            {"paragraph": "Advanced knowledge in the area of computer interfaces design, with experience in the field of Web accessibility and usability issues."}
-        ]
-    },
-    "expertise": {
-        "headline": "Areas of expertise",
-        "technologies": {
-            "headline": "Web engineering skills",
-            "list": [
-                { "description": "Web standards (HTML, CSS, JS and others)" },
-                { "description": "Web services, RESTFul and RPC (Remote Procedure Calls)" },
-                { "description": "SOA (Service Oriented Architecture)" },
-                { "description": "High Performance in the Web Platform" },
-                { "description": "Test-Driven Development, Continuous Integration and Continuous Delivery" },
-                { "description": "Cloud Computing (SaaS, PaaS and IaaS)" },
-                { "description": "Web accessibility (WCAG 2.0 and WAI-ARIA)" }
+        {
+            "title": "introduction",
+            "headline": "Front-end Web Engineer",
+            "paragraph": "As a Computer Science professor, stands as a passionate Web developer, lecturing development practices associated to Web technologies and Web engineering practices (such as: eXtreme Programming, TDD - Test-Driven Design, Continuous Integration and Continuous Delivery). Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintanability and multi-platform characteristic of the Web."
+        },
+        {
+            "title": "profile",
+            "headline": "Professional profile",
+            "paragraphs": [
+                {"paragraph": "Front-end developer experienced in the use of cutting edge technologies, with the objective of allowing rich interactions for users in the Web, exercising Web 2.0 and HTML5 core concepts."},
+                {"paragraph": "Specialist in Web Engineering practices such as Continuous Integration, Continuous Delivery and Test-Driven Design; for assuring the quality of large scale web projects."},
+                {"paragraph": "Advanced knowledge in the area of computer interfaces design, with experience in the field of Web accessibility and usability issues."}
             ]
         },
-        "programming": {
-            "headline": "Programming skills",
-            "list": [
-                { "description": "JavaScript" },
-                { "description": "Ajax Design patterns" },
-                { "description": "Object Oriented JavaScript" },
-                { "description": "Ajax Toolkits (jQuery, Angular.js, YUI)" },
-                { "description": "PHP" },
-                { "description": "Python" },
-                { "description": "Java (JSE and JEE)" },
-                { "description": "Design patterns" }
-            ]
-        }
-    },
-    "additional_information": [
+        {
+            "title": "expertise",
+            "headline": "Areas of expertise",
+            "technologies": {
+                "headline": "Web engineering skills",
+                "list": [
+                    { "description": "Web standards (HTML, CSS, JS and others)" },
+                    { "description": "Web services, RESTFul and RPC (Remote Procedure Calls)" },
+                    { "description": "SOA (Service Oriented Architecture)" },
+                    { "description": "High Performance in the Web Platform" },
+                    { "description": "Test-Driven Development, Continuous Integration and Continuous Delivery" },
+                    { "description": "Cloud Computing (SaaS, PaaS and IaaS)" },
+                    { "description": "Web accessibility (WCAG 2.0 and WAI-ARIA)" }
+                ]
+            },
+            "programming": {
+                "headline": "Programming skills",
+                "list": [
+                    { "description": "JavaScript" },
+                    { "description": "Ajax Design patterns" },
+                    { "description": "Object Oriented JavaScript" },
+                    { "description": "Ajax Toolkits (jQuery, Angular.js, YUI)" },
+                    { "description": "PHP" },
+                    { "description": "Python" },
+                    { "description": "Java (JSE and JEE)" },
+                    { "description": "Design patterns" }
+                ]
+            }
+        },
         {
             "headline": "Professional experience",
-            "class": "experience",
+            "title": "experience",
             "anchor": "experience",
             "list": [
                 { "description": "<span class=\"bold\">Professor at <a href=\"http://utfpr.edu.br\">UTFPR</a>. Brazil 2012.</span>: Computer Science professor with emphasis in Web Development, Software Engineering and Human-Computer Interaction. Main research topics include: Web Accessibillity, ARIA automatic evaluation strategies, XBI - Cross Browser Inconsistencies automatic detection and Web Applications Testing." },
@@ -109,7 +99,7 @@
         },
         {
             "headline": "Education",
-            "class": "education",
+            "title": "education",
             "anchor": "education",
             "list": [
                 { "description": "Ph.D. in Computer Science, S&atilde;o Paulo University (<a href=\"http://www.icmc.usp.br\">ICMC-USP</a>). S&atilde;o Carlos - SP, Brazil, 2014." },
@@ -121,7 +111,7 @@
         },
         {
             "headline": "Example Apps",
-            "class": "software",
+            "title": "software",
             "anchor": "software",
             "list": [
                 { "description": "<span class=\"bold\"><a href=\"https://github.com/watinha/homepage\">watinha.com homepage</a></span>: this is a presentation project, which makes use of different web technologies to improve the user experience in the curriculum. The source code is fully available in <a href=\"https://github.com/watinha/homepage\">Github</a>. This project makes use of <a href=\"http://pivotal.github.com/jasmine/\">Jasmine</a>, as a JavaScript Behavior Driven Development framework; <a href=\"http://casperjs.org/\">CasperJS</a>, to simulate the browser environment during functional tests; <a href=\"http://jshint.com/\">JSHint</a>, to validate the JavaScript source code against JS code standards; <a href=\"http://mustache.github.com/\">Mustache</a> template engine, to generate the webpages from templates; <a href=\"https://www.npmjs.com/package/grunt-contrib-cssmin\">CSS</a> and <a href=\"https://www.npmjs.com/package/grunt-contrib-uglify\">JS</a> code compression techniques to generate faster webpages with compressed JavaScript and CSS files; performance testing with <a href=\"http://yslow.org/\">yslow</a> on the production environment of the application; Halstead, Cyclomatic Complexity and Code-coverage metrics, using <a href=\"https://www.npmjs.com/package/grunt-complexity\">grunt-complexity plugin</a> for the complexity metrics and <a href=\"https://gotwarlost.github.io/istanbul/\">istanbul</a> for the code coverage; and finally, the complete build process of the project is managed through <a href=\"http://gruntjs.com/\">Grunt task manager</a>." },
@@ -137,7 +127,7 @@
         },
         {
             "headline": "Publications",
-            "class": "publications",
+            "title": "publications",
             "anchor": "publications",
             "list": [
                 { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?doid=2830542.2812812\">Fona: quantitative metric to measure focus navigation on rich internet applications</a></span>. ACM Transactions on the Web. New York, NY, US : ACM - Association for Computing Machinery, 2015. v. 9. p. 1-28. With Prof. Dra. Renata Pontin de Mattos Fortes and Ana Lu&iacute;za Dias." },
@@ -165,7 +155,7 @@
         },
         {
             "headline": "Presentations",
-            "class": "presentations",
+            "title": "presentations",
             "anchor": "presentations",
             "list": [
                 { "description": "Workshop presentation: <span class=\"bold\">Test Driven JavaScript Development</span>. In the Web Development Specialization Course at UTFPR - Federal Technological University of Paraná, Londrina, PR, Brazil." },
@@ -185,7 +175,7 @@
         },
         {
             "headline": "Languages Speak",
-            "class": "languages",
+            "title": "languages",
             "anchor": "languages",
             "list": [
                 { "description": "English (<span class=\"bold\">FCE - First Certificate in English, University of Cambridge, 2002)</span>" },
@@ -194,7 +184,7 @@
         },
         {
             "headline": "References",
-            "class": "references",
+            "title": "references",
             "anchor": "references",
             "list": [
                 { "description": "Prof. Dra. Jandira Palma Guenka. PD&I Manager of Guenka Software Development. E-mail: <a href=\"mailto:jgpalma @ uel.br\">jgpalma @ uel.br</a>." },
