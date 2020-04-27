@@ -1,0 +1,205 @@
+{
+    "title": "Willian Massami Watanabe - Curriculum",
+    "description": "As a Computer Science professor, is specialized in the development of Web applications, making use of the great number of technologies now available. Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintenance and multi-platform characteristic of the Web.",
+    "keywords": "Willian Massami Watanabe, curriculum, Web Developer, Front-end Web Engineer, Ajax, Web 2.0, Web usability, Web accessibility, HTML5, Test-Driven Development, Continuous Integration, Continuous Delivery",
+    "url": "http://wwatana.be",
+    "author": "Willian Massami Watanabe",
+    "address": "Corn&eacute;lio Proc&oacute;pio - PR, Brazil. <span class=\"bold\">E-mail: <a href=\"mailto:wwatanabe@utfpr.edu.br\">wwatanabe@utfpr.edu.br</a></span>",
+    "contacts": [
+        {
+            "link": "https://github.com/watinha",
+            "label": "github",
+            "icon_label": "github",
+            "background_position": "79px"
+        },
+        {
+            "link": "http://br.linkedin.com/pub/willian-watanabe/19/622/b90",
+            "label": "linkedin",
+            "icon_label": "linkedin",
+            "background_position": "-3px"
+        },
+        {
+            "link": "http://lattes.cnpq.br/8946276875418151",
+            "label": "lattes",
+            "icon_label": "lattes",
+            "background_position": "60px"
+        },
+        {
+            "link": "http://twitter.com/#!/watinha",
+            "label": "twitter",
+            "icon_label": "twitter",
+            "background_position": "41px"
+        },
+        {
+            "link": "https://www.researchgate.net/profile/Willian_Watanabe2",
+            "label": "research gate",
+            "icon_label": "researchgate",
+            "background_position": "20px"
+        }
+    ],
+    "sections": [
+        {"title": "Information", "anchor": "#information"},
+        {"title": "Introduction", "anchor": "#introduction"},
+        {"title": "Professional profile", "anchor": "#profile"},
+        {"title": "Areas of expertise", "anchor": "#expertise"},
+        {"title": "Professional experience", "anchor": "#experience"},
+        {"title": "Education", "anchor": "#education"},
+        {"title": "Scientific Software", "anchor": "#software"},
+        {"title": "Publications", "anchor": "#publications"},
+        {"title": "Presentations", "anchor": "#presentations"},
+        {"title": "Languages speak", "anchor": "#languages"},
+        {"title": "References", "anchor": "#references"}
+    ],
+    "introduction": {
+        "headline": "Front-end Web Engineer",
+        "paragraph": "As a Computer Science professor, stands as a passionate Web developer, lecturing development practices associated to Web technologies and Web engineering practices (such as: eXtreme Programming, TDD - Test-Driven Design, Continuous Integration and Continuous Delivery). Eager to contribute by developing quality assured Web applications, also considering attributes such as usability, maintanability and multi-platform characteristic of the Web."
+    },
+    "profile": {
+        "headline": "Professional profile",
+        "paragraphs": [
+            {"paragraph": "Front-end developer experienced in the use of cutting edge technologies, with the objective of allowing rich interactions for users in the Web, exercising Web 2.0 and HTML5 core concepts."},
+            {"paragraph": "Specialist in Web Engineering practices such as Continuous Integration, Continuous Delivery and Test-Driven Design; for assuring the quality of large scale web projects."},
+            {"paragraph": "Advanced knowledge in the area of computer interfaces design, with experience in the field of Web accessibility and usability issues."}
+        ]
+    },
+    "expertise": {
+        "headline": "Areas of expertise",
+        "technologies": {
+            "headline": "Web engineering skills",
+            "list": [
+                { "description": "Web standards (HTML, CSS, JS and others)" },
+                { "description": "Web services, RESTFul and RPC (Remote Procedure Calls)" },
+                { "description": "SOA (Service Oriented Architecture)" },
+                { "description": "High Performance in the Web Platform" },
+                { "description": "Test-Driven Development, Continuous Integration and Continuous Delivery" },
+                { "description": "Cloud Computing (SaaS, PaaS and IaaS)" },
+                { "description": "Web accessibility (WCAG 2.0 and WAI-ARIA)" }
+            ]
+        },
+        "programming": {
+            "headline": "Programming skills",
+            "list": [
+                { "description": "JavaScript" },
+                { "description": "Ajax Design patterns" },
+                { "description": "Object Oriented JavaScript" },
+                { "description": "Ajax Toolkits (jQuery, Angular.js, YUI)" },
+                { "description": "PHP" },
+                { "description": "Python" },
+                { "description": "Java (JSE and JEE)" },
+                { "description": "Design patterns" }
+            ]
+        }
+    },
+    "additional_information": [
+        {
+            "headline": "Professional experience",
+            "class": "experience",
+            "anchor": "experience",
+            "list": [
+                { "description": "<span class=\"bold\">Professor at <a href=\"http://utfpr.edu.br\">UTFPR</a>. Brazil 2012.</span>: Computer Science professor with emphasis in Web Development, Software Engineering and Human-Computer Interaction. Main research topics include: Web Accessibillity, ARIA automatic evaluation strategies, XBI - Cross Browser Inconsistencies automatic detection and Web Applications Testing." },
+                { "description": "<span class=\"bold\">Software enginner at <a href=\"http://www.yahoo.com\">Yahoo!</a>. Brazil 2011-2012.</span>: working specifically on two applications: <a href=\"http://meme.yahoo.com\">Meme</a> and <a href=\"http://profile.yahoo.com\">Profile</a>. Continuous Integration (CI) and Continuous Deployment strategies demand constant effort, while keeping the quality of continous delivery of features in the Web. Exercising Test-Driven Design, eXtreme Programming, Scrumm practices and dealing with performance and scalability non-functional requirements in Web systems." },
+                { "description": "<span class=\"bold\">Ph.D. CAPES Scholarship at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2010.</span>: part of the of the Ph.D. program of ICMC-USP, with the project entitled \"Automatic Accessibility Evaluation in RIA - Rich Internet Applications\". This research was financed by CAPES and works in the area of Web Accessibility, Web Usability, Web Engineering, MDD, RIA - Rich Internet Applications and Ajax. The Ph.D. project was conducted under the orientation of <a href=\"http://lattes.cnpq.br/7082447037374118\">Prof. Dra. Renata Pontin de Mattos Fortes</a>." },
+                { "description": "<span class=\"bold\">Master of Science FAPESP Scholarship at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2008-2010</span>: inserted at project <a href=\"http://caravelas.icmc.usp.br/wiki\">PorSimples</a> which was financed by <a href=\"http://www.fapesp.br/\">FAPESP</a> and <a href=\"http://research.microsoft.com/en-us/\">Microsoft Research</a>, was responsible by the integration of text processing operations and interface design of the <a href=\"http://caravelas.icmc.usp.br:3003\">Facilita</a>. The Facilita is a web application that works as an assistive technology facilitating portuguese reading activities on web pages through the use of automatic text summarization and simplification techniques. Simple interactions, usability and accessibility issues are essential requirements to the Facilita implementation and are the main themes of the research. JavaScript and AJAX characteristics provide some of the key features of design's simplicity and usability in Facilita. The project was developed under orientation of <a href=\"http://lattes.cnpq.br/7082447037374118\">Prof. Dra. Renata Pontin de Mattos Fortes</a>." },
+                { "description": "<span class=\"bold\">Qualipso Scholarship</span> at <a href=\"http://www.icmc.usp.br/\">S&atilde;o Paulo University - ICMC (Mathematics and Computer Science Institute)</a>. Brazil, 2010-2010: the <a href=\"http://www.qualipso.org/\">Qualipso - Quality Platform for Open Source Software</a> project aims at elaboration a software maturity framework for Open Source Software (OMM - OpenSource Maturity Model). The Qualipso project has the objective of elaborating technologies, processes and policies that facilitate the development of Open Source quality assured software. The activities realized in the project involved the integration of different applications with the use of webservices technologies (RESTFul)." },
+                { "description": "<span class=\"bold\">IT Analyst at <a href=\"http://www.guenka.com.br/\">Guenka Software Development</a>. Brazil, 2007-2008</span>: Part of the team responsible by the remote marketing software implementation, through the use of mobile devices, an optimized communication protocol (due to limitations of the mobile platform) and databases server applications. Collaborated in the development of a server applications that allowed other applications remote update through the use of XML-RPC." },
+                { "description": "<span class=\"bold\">ITI (Information Technology Initiation) CNPq Scholarship at <a href=\"http://www.guenka.com.br/\">Guenka Software Development</a>. Brazil, 2006-2007</span>: collaborated in the development of a communication channel between mobile devices and web servers. The communication was made between Java Servlet containners and mobile devices (Handhelds) with the use of XML-RPC to exchange server persistent data." },
+                { "description": "<span class=\"bold\">Jetpack for Learning Design Challenge Leader</span>: managed a team participation on the <a href=\"http://design-challenge.mozillalabs.com/jetpack-for-learning/\">Jetpack for Learning Design Challenge</a> of Mozilla. In this design challenge, our team proposed the development of <a href=\"https://wiki.mozilla.org/Education/Projects/JetpackForLearning/Profiles/Educational_Facilita\">Educational Facilita</a> making use of teh Jetpack extensions framework for Firefox. We implemented a reading assistance browser extension using multiple Ajax technologies and other resources available in the Jetpack platform." },
+                { "description": "<span class=\"bold\"><a href=\"http://www.w4a.info/2010/submissions/studentawards.shtml\">Google Student Award</a></span>: success application in the Google Student Award for the <a href=\"http://www.w4a.info/2010/\">7th International Cross-Disciplinary Conference on Web Accessibility (W4A 2010)</a>, in Raleigh USA co-located with the <a href=\"http://www.www2010.org/\">Ninteenth International World Wide Web Conference</a>. The award granted financial support for the student to attend the W4A 2010 Conference." }
+            ]
+        },
+        {
+            "headline": "Education",
+            "class": "education",
+            "anchor": "education",
+            "list": [
+                { "description": "Ph.D. in Computer Science, S&atilde;o Paulo University (<a href=\"http://www.icmc.usp.br\">ICMC-USP</a>). S&atilde;o Carlos - SP, Brazil, 2014." },
+                { "description": "Master of Science in Computer Science, S&atilde;o Paulo University (<a href=\"http://www.icmc.usp.br\">ICMC-USP</a>). S&atilde;o Carlos - SP, Brazil. Concluded in 2010." },
+                { "description": "Bachelor of Science in Computer Science, Londrina State University (<a href=\"http://www.uel.br\">UEL</a>). Londrina - PR, Brazil, 2008." },
+                { "description": "First Certificate in English, <a href=\"http://www.cam.ac.uk/\">University of Cambridge</a>, 2002." },
+                { "description": "Network and Computer building and maintenance, Technology Education Center, <a href=\"http://www.iapec.com.br/\">IAPEC</a>, Brazil, 2004." }
+            ]
+        },
+        {
+            "headline": "Example Apps",
+            "class": "software",
+            "anchor": "software",
+            "list": [
+                { "description": "<span class=\"bold\"><a href=\"https://github.com/watinha/homepage\">watinha.com homepage</a></span>: this is a presentation project, which makes use of different web technologies to improve the user experience in the curriculum. The source code is fully available in <a href=\"https://github.com/watinha/homepage\">Github</a>. This project makes use of <a href=\"http://pivotal.github.com/jasmine/\">Jasmine</a>, as a JavaScript Behavior Driven Development framework; <a href=\"http://casperjs.org/\">CasperJS</a>, to simulate the browser environment during functional tests; <a href=\"http://jshint.com/\">JSHint</a>, to validate the JavaScript source code against JS code standards; <a href=\"http://mustache.github.com/\">Mustache</a> template engine, to generate the webpages from templates; <a href=\"https://www.npmjs.com/package/grunt-contrib-cssmin\">CSS</a> and <a href=\"https://www.npmjs.com/package/grunt-contrib-uglify\">JS</a> code compression techniques to generate faster webpages with compressed JavaScript and CSS files; performance testing with <a href=\"http://yslow.org/\">yslow</a> on the production environment of the application; Halstead, Cyclomatic Complexity and Code-coverage metrics, using <a href=\"https://www.npmjs.com/package/grunt-complexity\">grunt-complexity plugin</a> for the complexity metrics and <a href=\"https://gotwarlost.github.io/istanbul/\">istanbul</a> for the code coverage; and finally, the complete build process of the project is managed through <a href=\"http://gruntjs.com/\">Grunt task manager</a>." },
+                { "description": "<span class=\"bold\"><a href=\"https://github.com/watinha/aria-check-menus\">aria-check-menus</a></span>: a Selenium WebDriver implementation which has the goal of automatically identifying Drop-down menu widgets in web applications. This project uses the Selenium WebDriver API, browser mutation observers and DOM attributes to navigate through web applications and identify menu widget implementations." },
+                { "description": "<span class=\"bold\"><a href=\"https://github.com/watinha/javacmd\">javacmd</a></span>: boilerplate structure for Java projects. It includes a single Makefile which automatically compile Java source code, generates jar executable files, calculates dependencies based in a single jar directory, runs <a href=\"http://junit.org/\">JUnit</a> tests, generates <a href=\"http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html\">JPA - Java Persistence API</a> configuration files and generates <a href=\"http://www.oracle.com/technetwork/java/javaee/overview/index.html\">JEE - Java Enterprise Edition</a> applications structure. The goal of this project is to ease the development of Java projects with no use of IDEs. It is similar to <a href=\"http://maven.apache.org/\">Maven</a>, however much simplier, with no XML configuration files." },
+                { "description": "<span class=\"bold\"><a href=\"https://github.com/watinha/tabindex-counter\">tabindex-counter</a></span>: a <a href=\"http://casperjs.org/\">CasperJS</a> script which collects HTML attributes metrics from webpages. This script was used to investigate how a large amount of websites implement Focus Navigation requirements and whether these implementations are associated to ARIA specific design recommendations." },
+                { "description": "<span class=\"bold\"><a href=\"https://github.com/watinha/aria-check\">aria-check</a></span>: a Firefox Addon built on top of the <a href=\"https://developer.mozilla.org/en-US/Add-ons/SDK\">Addon-SDK</a>. The Addon runs a generic test-suite, which searches for Tab Widgets implementations and evaluates whether it implements ARIA specification requirements. The ARIA specification describes the use of semantic markup (such as: roles, aria-labels, among others) and keyboard interaction mechanisms for making JavaScript based interface components accessible." },
+                { "description": "<span class=\"bold\"><a href=\"https://github.com/watinha/Pyccuracy-Accessibility-Actions\">Pyccuracy Accessibility Actions</a></span>: The main objective of this project is to implement accessibility actions for the <a href=\"http://pyccuracy.org\">pyccuracy</a>, web acceptance testing application. <a href=\"http://pyccuracy.org\">Pyccuracy</a> makes use of natural language expressions to generate user stories and acceptance scenarios that are automatically run in the browser, evaluating the behaviour of all layers of a web application (server and client side-scripting). However <a href=\"http://pyccuracy.org\">pyccuracy</a> still have not implemented actions that can be classified as accessible for disabled users like \"tabbing navigation\", focus possibility for interactive elements, landmarks and header navigation, among other actions. The goal of implementing accessibility actions for pyccuracy is to be able to execute acceptance tests of web applications functionality, considering disabled users task completion with assistive technologies. These users do no rely on the same visual and interactive mechanisms such as mouse and link colors, for example. So pyccuracy actions must consider these characteristics to guarantee that the functionality of the web application is available for all users. From the development perspective, accessibility actions drive automatic accessibility evaluation tools into a Continuous Integration environment. Making it possible to include accessibility non-functional requirements into the development life-cycle of projects and assisting developers while coding solutions for them." },
+                { "description": "<span class=\"bold\"><a href=\"http://www.watinha.com/educational-facilita\">Educational Facilita</a></span>: another web application that aims to automatically provide users with accessible textual content, through the use of Named Entities Recognition (automatically identifying proper nouns and others entities in the text) and Lexical Elaboration (providing users with simplier versions of the same word) techniques. The application identifies named entities in the text and then it provides the user with additional information about those entities. The additional informations are extracted from <a href=\"http://www.wikipedia.org\">Wikipedia</a>. The application also presents synonimous for words that are evaluated as complex or difficult to be understood. Educational Facilita was implemented as a <a href=\"https://jetpack.mozillalabs.com/\">Jetpack extension</a>, and by doing so works as a browser plugin feature." },
+                { "description": "<span class=\"bold\"><a href=\"https://addons.mozilla.org/en-US/firefox/addon/scale-tabs/\">Scale Tabs</a></span>: improved version of the 50 lines contest - Scale Tabs Jetpack addon. This addon release used the Addon-SDK (improved version and final release of the Jetpack prototype) and presents improved features (Address bar integration) and improved layout. Its source code is available in <a href=\"https://github.com/watinha/Scale-Tabs\">github</a>." },
+                { "description": "<span class=\"bold\"><a href=\"https://github.com/watinha/yql-accessibililty\">YQL-Accessibility</a></span>: YQL stands for Yahoo! Query Language, as a standard language for querying web resources. It presents a SQL-like syntax that enable queries to be made on RESTful webservices. YQL-Accessibility implements a set of tables (two for the moment) that allow these queries to be executed against web accessibility evaluation websites. It provides developers a simple way and unique way of identifying and reporting accessibility issues that are raised by automatic evaluation tools available in the Web." }
+            ]
+        },
+        {
+            "headline": "Publications",
+            "class": "publications",
+            "anchor": "publications",
+            "list": [
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?doid=2830542.2812812\">Fona: quantitative metric to measure focus navigation on rich internet applications</a></span>. ACM Transactions on the Web. New York, NY, US : ACM - Association for Computing Machinery, 2015. v. 9. p. 1-28. With Prof. Dra. Renata Pontin de Mattos Fortes and Ana Lu&iacute;za Dias." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://www.rintonpress.com/journals/jweonline.html#v14n12\">Keyboard navigation mechanisms in widgets: an investigation on ARIA's implementations</a></span>. Journal of Web Engineering. Paramus, NJ, US: Rinton Press, 2015. v. 14. p. 41-62. With Prof. Dra. Renata Pontin de Mattos Fortes and Rafael Jos&eacute; Geraldo." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?doid=2554850.2554947\">Keyboard navigation mechanisms in tab widgets: an investigation on ARIA's conformance</a></span>. In SAC '14 Proceedings of the 29th Annual ACM Symposium on Applied Computing. New York, NY, US : ACM - Association for Computing Machinery, 2014. v. 1. p. 721-726. With Prof. Dra. Renata Pontin de Mattos Fortes and Rafael Jos&eacute; Geraldo." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?doid=2507065.2507074\">An approach to improve accessibility and usability of existing web system</a></span>. In SIGDOC '13 Proceedings of the 31st ACM international conference on Design of communication. New York, NY, US : ACM - Association for Computing Machinery, 2013. v. 1. p. 39-48. With Prof. Dra. Renata Pontin de Mattos Fortes, Ana Lu&iacute;za Dias and Paulo Cesar Masieiro." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=2207016.2207022&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">Using Acceptance Tests to Validate Accessibility Requirements in RIA</a></span>. In W4A '12 Proceedings of the International Cross-Disciplinary Conference on Web Accessibility. New York, NY, US : ACM - Association for Computing Machinery, 2012. v. 1. p. 1-10. With Prof. Dra. Renata Pontin de Mattos Fortes and Ana Lu&iacute;za Dias." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=2038476.2038504&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">Usability evaluation of horizontal navigation bar with drop-down menus by middle aged adults</a></span>. In Proceedings of the 29th ACM international conference on Design of communication (SIGDOC '11). New York, NY, US : ACM - Association for Computing Machinery, 2011. v. 1. p. 145-150. With Eduardo Pezutti Beletato dos Santos, Prof. Silvana Maria Affonso de Lara, M&aacute;rio Castro and Prof. Dra. Renata Pontin de Mattos Fortes." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://www.springerlink.com/content/th6q7122g68562w3/?MUD=MP\">The Link-Offset-Scale Mechanism for Improving the Usability of Touch Screen Displays on the Web</a></span>. Lecture Notes in Computer Science, v. 6948, p. 356-372, 2011. With Prof. Dra. Renata Pontin de Mattos Fortes and Maria da Gra&ccedil;a Campos Pimentel." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=1850770.1836292&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">W4A 2010: a web accessibility conference report from the Google W4A student award winners.</a></span>. SIGWEB Newsletter, Autumn (Sep. 2010). ACM - Association of Computing Machinery, 2010, New York - NY - US. p. 1 - 5. With Maia Naftali and David Sloan." },
+                { "description": "Extended paper: <span class=\"bold\"><a href=\"http://www.tandfonline.com/doi/abs/10.1080/13614568.2010.542620\">Adapting web content for low literacy readers by using lexical elaboration and named entities labeling</a></span>. In New Review of Hypermedia and Multimedia, Volume 16, Issue 3, 2010, Special Issue: Web Accessibility. With Arnaldo Candido Junior, Marcelo Adriano Am&acirc;ncio, Matheus de Oliveira, Prof. Dra. Renata Pontin de Mattos Fortes, Prof. Dr. Thiago Alexandre Salgueiro Pardo and Prof. Dra. Sandra Maria Alu&iacute;sio." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=1805986.1805998&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">Adapting web content for low literacy readers by using lexical elaboration and named entities labeling</a></span>. In proceedings of W4A 2010 - International Cross-Disciplinary Conference on Web Accessibility. ACM - Association of Computing Machinery, 2010, Raleigh - NC - US. p. 1 - 9. With Arnaldo Candido Junior, Marcelo Adriano Am&acirc;ncio, Matheus de Oliveira, Prof. Dra. Renata Pontin de Mattos Fortes, Prof. Dr. Thiago Alexandre Salgueiro Pardo and Prof. Dra. Sandra Maria Alu&iacute;sio.This event was co-located with WWW 2010 - 19th International World Wide Web Conference." },
+                { "description": "Short paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=1805986.1805997&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">Facilita: reading assistance to the functionally illiterate</a></span>. In proceedings of W4A 2010 - International Cross-Disciplinary Conference on Web Accessibility. ACM - Association of Computing Machinery, 2010, Raleigh - NC - US. p. 1 - 2. This event was co-located with WWW 2010 - 19th International World Wide Web Conference." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=1878450.1878479&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">WCAG Conformance approach based on Model-Driven Development and WebML</a></span>. In proceedings of SIGDOC 2010 - ACM International Conference on Design of Communication. ACM - Association of Computing Machinery, 2010, S&atilde;o Carlos - SP - Brazil. p. 1 - 8. With David Fernandez Neto, Thiago Jabur Bittar and Prof. Dra. Renata Pontin de Mattos Fortes." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=1878450.1878480&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">Improving WCAG for the Elderly Web Accessibility</a></span>. In proceedings of SIGDOC 2010 - ACM International Conference on Design of Communication. ACM - Association of Computing Machinery, 2010, S&atilde;o Carlos - SP - Brazil. p. 1 - 8. With Silvana Maria Affonso de Lara, Eduardo Pezutti Beletato dos Santos and Prof. Dra. Renata Pontin de Mattos Fortes." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=1621995.1622002&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">Facilita: Reading Assistance for Low-literacy Readers</a></span>. . In proceedings of SIGDOC 2009 - ACM International Conference on Design of Communication. ACM - Association of Computing Machinery, 2009, Bloomington - IN - US. p. 29 - 36. With Arnaldo Candido Junior, Vin&iacute;cius Rodriguez de Uz&ecirc;da, Prof. Dra. Renata Pontin de Mattos Fortes, Prof. Dr. Thiago Alexandre Salgueiro Pardo and Prof. Dra. Sandra Maria Alu&iacute;sio." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=1621995.1622033&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">Web Communication and Interaction Modeling using Model-Driven Development</a></span>. In proceedings of SIGDOC 2009 - ACM International Conference on Design of Communication. ACM - Association of Computing Machinery, 2009, Bloomington - IN - US. p. 193 - 197. With Thiago Jabur Bittar, Prof. Dra. Renata Pontin de Mattos Fortes and Luanna Lopes Lobato." },
+                { "description": "Full paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=1858477.1858487&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">The Use of Automatic Techniques for evaluating usability in Multimodal Web interfaces project</a></span>. In proceedings of XV Simp&oacute;sio Brasileiro de Sistemas Multim&iacute;dia e Web, 2009, Fortaleza - CE - Brazil. v. 2. p. 75-82. With Americo Talarico Neto, Prof. Dra. Renata Pontin de Mattos Fortes and Alessandro Assis." },
+                { "description": "Short paper: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=1858477.1858516&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">Facilita: helping the reading of texts available on the Web</a></span>. In proceeding of XV Simp&oacute;sio Brasileiro de Sistemas Multim&iacute;dia e Web, 2009, Fortaleza - CE - Brazil. v. 2. p. 27-30. With Prof. Dra. Renata Pontin de Mattos Fortes, Prof. Dr. Thiago Alexandre Salgueiro Pardo and Prof. Dra. Sandra Maria Alu&iacute;so." },
+                { "description": "Extended abstract: <span class=\"bold\">RSS Content for mobile devices</span>. In proceeding of XV Simp&oacute;sio Brasileiro de Sistemas Multim&iacute;dia e Web, 2009, Fortaleza - CE - Brazil. v. 2. p. 87-88. With David Fernandes Neto, Eduardo Pezutti Beletato dos Santos and Prof. Dra. Renata Pontin de Mattos Fortes." },
+                { "description": "Full paper: <span class=\"bold\">Systematic Review on accessible web application design principles for the functionally illiterate</span>. In proceedings of SEMISH - XXXVI Semin&aacute;rio Integrado de Software e Hardware, 2009. CSBC - XXIX Congresso da Sociedade Brasileira da Computa&ccedil;&atilde;o, 2009, Bento Gon&ccedil;alvez - RS - Brazil. With Prof. Dra. Renata Pontin de Mattos Fortes." },
+                { "description": "Technical report: <span class=\"bold\">Facilita's development</span>. Available at: <a href=\"http://www.icmc.usp.br/~biblio/BIBLIOTECA/rel_tec/RT_343.pdf\">ICMC-USP library</a>, p. 85. With Prof. Dra. Renata Pontin de Mattos Fortes." },
+                { "description": "Extended abstract: <span class=\"bold\"><a href=\"http://dl.acm.org/citation.cfm?id=1809980.1810007&coll=DL&dl=GUIDE&CFID=104026866&CFTOKEN=46321356\">Rich Multimodal Interfaces components development with X+V and Dojo Widgets</a></span>. In proceeding of XIV Simp&oacute;sio Brasileiro de Sistemas Multim&iacute;dia e Web, 2008, Vila Velha - ES - Brazil. v. 2. p. 97-100. With Americo Talarico Neto, Adalberto Gonzaga, and Prof. Dra. Renata Pontin de Mattos Fortes." }
+            ]
+        },
+        {
+            "headline": "Presentations",
+            "class": "presentations",
+            "anchor": "presentations",
+            "list": [
+                { "description": "Workshop presentation: <span class=\"bold\">Test Driven JavaScript Development</span>. In the Web Development Specialization Course at UTFPR - Federal Technological University of Paraná, Londrina, PR, Brazil." },
+                { "description": "Oral presentation: <span class=\"bold\">Adapting web content for low literacy readers by using lexical elaboration and named entities labeling</span>. In W4A 2010 - International Cross-Disciplinary Conference on Web Accessibility. ACM - Association of Computing Machinery, 2010, Raleigh - NC - US. This event was co-located with WWW 2010 - 19th International World Wide Web Conference." },
+                { "description": "Oral presentation: <span class=\"bold\">WCAG Conformance approach based on Model-Driven Development and WebML</span>. In SIGDOC 2010 - ACM International Conference on Design of Communication. ACM - Association of Computing Machinery, 2010, S&atilde;o Carlos - SP - Brazil." },
+                { "description": "Oral presentation: <span class=\"bold\">Introduction to HTML5</span>. In <a href=\"http://www.enacomp.com.br/programacao\">Enacomp 2010 - VIII Encontro Anual de Computação</a>, 2010, Catal&atilde;o, Goi&aacute;, Brazil." },
+                { "description": "Oral presentation: <span class=\"bold\">Dojo Toolkit and the Microsoft Research Experience</span>. In <a href=\"http://www.enacomp.com.br/programacao\">Enacomp 2010 - VIII Encontro Anual de Computação</a>, 2010, Catal&atilde;o, Goi&aacute;, Brazil." },
+                { "description": "Oral presentation: <span class=\"bold\">Short course in JavaScript, Ajax and jQuery</span>. In <a href=\"http://www.fafibe.br/atividadesacademicas/?atividade=75\">II F&oacute;rum de Tecnologia Fafibe</a>, 2010, Bebedouro, SP, Brazil." },
+                { "description": "Oral presentation: <span class=\"bold\">Short course in JavaScript, Ajax and jQuery</span>. In <a href=\"http://pet.icmc.usp.br/semcomp13/courses/11\">Semcomp 13</a>, 2010, S&atilde;o Carlos, SP, Brazil." },
+                { "description": "Oral presentation: <span class=\"bold\">Evolution and Future of the Web: Web 2.0, AJAX and HTML5 Challenges</span>. In <a href=\"http://pet.icmc.usp.br/semcomp13/lectures/11\">Semcomp 13</a>, 2010, S&atilde;o Carlos, SP, Brazil." },
+                { "description": "Oral presentation: <span class=\"bold\">Model-Driven Web Development</span>. In <a href=\"http://pet.icmc.usp.br/semcomp13/lectures/13\">Semcomp 13</a>, 2010, S&atilde;o Carlos, SP, Brazil." },
+                { "description": "Oral presentation: <span class=\"bold\">Facilita: Reading Assistance for Low-literacy Readers</span>. In SIGDOC 2009 - ACM International Conference on Design of Communication. ACM - Association of Computing Machinery, 2009, Bloomington - IN - US." },
+                { "description": "Oral presentation: <span class=\"bold\">Web Communication and Interaction Modeling using Model-Driven Development</span>. In SIGDOC 2009 - ACM International Conference on Design of Communication. ACM - Association of Computing Machinery, 2009, Bloomington - IN - US." },
+                { "description": "Oral presentation: <span class=\"bold\">Systematic Review on accessible web application design principles for the functionally illiterate</span>. In SEMISH - XXXVI Semin&aacute;rio Integrado de Software e Hardware, 2009. CSBC - XXIX Congresso da Sociedade Brasileira da Computa&ccedil;&atilde;o, 2009, Bento Gon&ccedil;alvez - RS - Brazil." },
+                { "description": "Poster presentation: <span class=\"bold\">Rich Multimodal Interfaces components development with X+V and Dojo Widgets</span>. In XIV Simp&oacute;sio Brasileiro de Sistemas Multim&iacute;dia e Web, 2008, Vila Velha - ES - Brazil." }
+            ]
+        },
+        {
+            "headline": "Languages Speak",
+            "class": "languages",
+            "anchor": "languages",
+            "list": [
+                { "description": "English (<span class=\"bold\">FCE - First Certificate in English, University of Cambridge, 2002)</span>" },
+                { "description": "Portuguese" }
+            ]
+        },
+        {
+            "headline": "References",
+            "class": "references",
+            "anchor": "references",
+            "list": [
+                { "description": "Prof. Dra. Jandira Palma Guenka. PD&I Manager of Guenka Software Development. E-mail: <a href=\"mailto:jgpalma @ uel.br\">jgpalma @ uel.br</a>." },
+                { "description": "Prof. Dra. Renata Pontin de Mattos Fortes. Associate Professor of Computer Science at S&atilde;o Paulo University. E-mail: <a href=\"mailto:renata @ icmc.usp.br\">renata @ icmc.usp.br</a>." }
+            ]
+        }
+    ]
+}
