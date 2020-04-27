@@ -1,0 +1,65 @@
+/* All selectors here should only alter .files children classes */
+
+/* ipad fixes */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .files > .wrapper > * {
+        bottom: 0px;
+    }
+}
+
+/* iphone fixes */
+@media all and (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+    .files .wrapper * p,
+    .files .wrapper * ul {
+        font-size: 20px;
+        line-height: 150%;
+    }
+    .files .wrapper * ul {
+        padding: 3px;
+    }
+    .files {
+        min-width: 300px;
+        margin: auto;
+    }
+    .files > .wrapper > *:not(.header),
+    .files > .wrapper > .diagonal:not(.header) {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+
+        position: relative;
+        width: 100% !important;
+        height: 100px;
+        margin-bottom: -15px;
+        top: 50px;
+        left: 0px !important;
+
+        -moz-transform: scale(1) matrix(1, 0.3, -0.3, 1, 0, 0) !important;
+        -webkit-transform: scale(1) matrix(1, 0.3, -0.3, 1, 0, 0) !important;
+        -o-transform: scale(1) matrix(1, 0.3, -0.3, 1, 0, 0) !important;
+        -ms-transform: scale(1) matrix(1, 0.3, -0.3, 1, 0, 0) !important;
+        transform: scale(1) matrix(1, 0.3, -0.3, 1, 0, 0) !important;
+    }
+    .files > .wrapper > .open:not(.header) {
+        /* transforms */
+        -moz-transform: matrix(1, 0, 0, 1, 0, 0) !important;
+        -webkit-transform: matrix(1, 0, 0, 1, 0, 0) !important;
+        -o-transform: matrix(1, 0, 0, 1, 0, 0) !important;
+        -ms-transform: matrix(1, 0, 0, 1, 0, 0) !important;
+        transform: matrix(1, 0, 0, 1, 0, 0) !important;
+        float: none;
+        margin: 20px 0;
+        cursor: text;
+        z-index: inherit;
+        height: 100%;
+    }
+    .files > .wrapper > .header {
+        top: 0px;
+        bottom: 0px;
+    }
+}

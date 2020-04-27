@@ -1,0 +1,257 @@
+/* All selectors here should only alter .files children classes */
+.body > * {
+    opacity: 0;
+}
+.wrapper_hidden {
+    display: none;
+}
+/* hidding elements to clean interface*/
+.files .wrapper * p,
+.files .wrapper * ul,
+.files .wrapper * h4 {
+    display: none;
+    height: 0;
+    opacity: 0;
+    line-height: 150%;
+}
+
+/* standard layout */
+.files > .wrapper > * {
+    border: medium solid rgb(187, 187, 187);
+    padding: 0 30px;
+    cursor: pointer;
+    margin-bottom: -30px;
+    width: 40%;
+    height: 80px;
+    position: relative;
+    background-color: #FFFFFF;
+    opacity: 1;
+
+    /* box shadow */
+    -webkit-box-shadow:  10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow:  10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+    /* border radius */
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+
+    /* transitions */
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: none;
+    transition: all 0.3s ease;
+    -webkit-backface-visibility: hidden;
+
+    /* transforms */
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.files > .wrapper > *:hover:not(.header),
+.files > .wrapper > *:focus:not(.header),
+.files > .wrapper > *:active:not(.header) {
+    /* transforms these need to be important to
+     * override inline CSS definitions made via JavaScript*/
+    -moz-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0) !important;
+    -webkit-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0) !important;
+    -o-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0) !important;
+    -ms-transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0) !important;
+    transform: scale(1.1) matrix(1, 0, 0, 1, 0, 0) !important;
+}
+
+/* diagonal boxes specific styles */
+.files > .wrapper > .diagonal:not(.header) {
+    border: medium solid rgb(187, 187, 187);
+    padding: 0 30px;
+    cursor: pointer;
+    margin-bottom: -30px;
+    width: 40%;
+    height: 80px;
+    position: relative;
+    bottom: 30px;
+    background-color: #FFFFFF;
+
+    /* box shadow */
+    -webkit-box-shadow:  10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow:  10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+    /* border radius */
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+
+    /* transitions */
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: none;
+    transition: all 0.3s ease;
+
+    /* transforms */
+    -moz-transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0);
+    -webkit-transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0);
+    -o-transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0);
+    -ms-transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0);
+    transform: scale(1) matrix(1, 0.3, -0.7, 1, 0, 0);
+}
+.files > .wrapper > .diagonal:hover:not(.header),
+.files > .wrapper > .diagonal:active:not(.header),
+.files > .wrapper > .diagonal:focus:not(.header) {
+    /* transitions */
+    -o-transition: none;
+
+    /* transforms these need to be important to
+     * override inline CSS definitions made via JavaScript*/
+    -moz-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
+    -webkit-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
+    -o-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
+    -ms-transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
+    transform: scale(1.1) matrix(1, 0.3, -0.7, 1, 0, 0) !important;
+}
+
+/* open state */
+.files > .wrapper > .open:not(.header) {
+    cursor: text;
+    height: 100%;
+    float: right;
+    position: relative;
+    bottom: 100px;
+    width: 57%;
+    z-index: 1;
+
+    /* transforms */
+    -moz-transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
+    -o-transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
+    transform: scale(1) matrix(1, 0, 0, 1, 0, 0);
+
+    /* transitions */
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+
+    /* animation */
+    animation-name: open;
+    animation-duration: 0.3s;
+}
+@keyframes open {
+    from { transform: translateX(500px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+.files > .wrapper > .open:hover:not(.header),
+.files > .wrapper > .open:active:not(.header),
+.files > .wrapper > .open:focus:not(.header) {
+    /* transforms these need to be important to
+     * override inline CSS definitions made via JavaScript*/
+    -moz-transform: scale(1) matrix(1, 0, 0, 1, 0, 0) !important;
+    -webkit-transform: scale(1) matrix(1, 0, 0, 1, 0, 0) !important;
+    -o-transform: scale(1) matrix(1, 0, 0, 1, 0, 0) !important;
+    -ms-transform: scale(1) matrix(1, 0, 0, 1, 0, 0) !important;
+    transform: scale(1) matrix(1, 0, 0, 1, 0, 0) !important;
+}
+.files .wrapper .open p,
+.files .wrapper .open ul,
+.files .wrapper .open h4 {
+    display: block;
+    height: 100%;
+    opacity: 1;
+}
+.files > .wrapper > .hidden {
+    height: 0 !important;
+    opacity: 0;
+    margin: 30px;
+    z-index: 1;
+
+    /* transforms these need to be important to
+     * override inline CSS definitions made via JavaScript*/
+    -moz-transform: scale(0.5) matrix(1, 0, 0, 1, 0, 0) !important;
+    -webkit-transform: scale(0.5) matrix(1, 0, 0, 1, 0, 0) !important;
+    -o-transform: scale(0.5) matrix(1, 0, 0, 1, 0, 0) !important;
+    -ms-transform: scale(0.5) matrix(1, 0, 0, 1, 0, 0) !important;
+    transform: scale(0.5) matrix(1, 0, 0, 1, 0, 0) !important;
+}
+.files .columns {
+    width: 100%;
+    float: none;
+}
+
+/* header specific styles */
+.files .header {
+    border: none;
+    padding: 0;
+    cursor: auto;
+    margin-bottom: 13px;
+    height: auto;
+    width: 100%;
+    position: relative;
+
+    /* box shadow */
+    -webkit-box-shadow:  0 0 0 0 rgba(0, 0, 0, 0.5);
+    box-shadow:  0 0 0 0 rgba(0, 0, 0, 0.5);
+
+    /* border radius */
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+
+    /* transitions */
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+
+    /* transforms */
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+
+}
+.files > .header:hover {
+    /* transforms */
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.files .header p {
+    display: block;
+    height: 100%;
+    opacity: 1;
+}
+
+.files hr {
+    display: none;
+}
+
+.files .header+hr {
+    display: block;
+    width: 0%;
+    margin-bottom: 20px;
+
+    /* transitions */
+    -webkit-transition: width 3s linear;
+    -moz-transition: width 3s linear;
+    -ms-transition: width 3s linear;
+    -o-transition: width 3s linear;
+    transition: width 3s linear;
+}
+
+.files .header+.headerLongerLine {
+    width: 80%;
+}
+
+.files > .wrapper > * {
+    clear: none;
+}
+.files .header .icon.reset_layout {
+    background-position: -104px 0;
+}

@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 export const curriculumSlice = createSlice({
     name: 'curriculum',
@@ -19,3 +20,14 @@ export const curriculumSlice = createSlice({
     },
 });
 export default curriculumSlice.reducer;
+export const curriculumActions = curriculumSlice.actions;
+export const map_loading = (state) => state.curriculum.loading;
+export const map_curriculum = (state) => state.curriculum.curriculum;
+export const loadCurriculum = () => {
+    return async (dispatch) => {
+        dispatch(curriculumActions.load_start());
+        const response = await axios.get('./curriculum.json');
+		dispatch(curriculumActions.set(response['data']));
+        dispatch(curriculumActions.load_end());
+    };
+};

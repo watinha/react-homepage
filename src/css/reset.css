@@ -1,0 +1,135 @@
+body{
+    width: 80%;
+    min-width: 810px;
+    max-width: 1000px;
+    min-height: 650px;
+    margin: auto;
+}
+ul, p {
+    line-height: 150%;
+}
+h1 > a {
+    color: black;
+    text-decoration: none;
+}
+h1, h2{
+    text-align:center;
+}
+p{
+    text-align: justify;
+}
+h1,h2,h3{
+    text-transform: uppercase;
+}
+.columns{
+    width: 50%;
+    float: left;
+    position: relative;
+    bottom: 1em;
+}
+.columns h4{
+    background-color: #E3E3E3;
+    padding: 0.2em 0;
+    text-indent: 1em;
+    border-right: solid #FFFFFF;
+}
+.columns ul li{
+    width: 95%;
+}
+ul{
+    text-align: justify;
+}
+p{
+    text-align: center;
+}
+span.bold{
+    font-weight: bold;
+}
+.anchor{
+    display: none;
+}
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+.header .contact li{
+    display: block-inline;
+}
+.header .contact {
+    text-align: center;
+    padding-left: 0;
+}
+.header .contact li {
+    display: inline-block;
+    margin: 0 7px;
+}
+.header .icon,
+.header .contact .icon {
+    position: relative;
+    top: 2px;
+    display: block;
+    float: left;
+    width: 18px;
+    height: 18px;
+    background-size: 145px 20px;
+    background-image: url(../images/logos.png);
+    margin-right: 3px;
+}
+.header .contact .icon.linkedin {
+    background-position: -2px 0;
+}
+.header .contact .icon.github {
+    background-position: 123px 0;
+}
+.header .contact .icon.lattes {
+    background-position: -40px 0;
+}
+.header .contact .icon.twitter {
+    background-position: -59px 0;
+}
+.header .contact .icon.researchgate {
+    background-position: -79px 0;
+}
+.header .icon.reset_layout {
+    background-position: -125px -1px;
+}
+.wrapper > * {
+    clear:both;
+}
+.header .layout_switcher {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    display: block;
+    padding: 0 0 3px;
+}
+.header .layout_switcher .icon {
+    margin-right: 0;
+}
+.header {
+    position: relative;
+}
+@media print {
+    .header .layout_switcher {
+        display: none;
+    }
+    .header .contact {
+        display: none;
+    }
+}
+hr {
+    width: 100%;
+
+    /* transitions */
+    -webkit-transition: width 3s linear;
+    -moz-transition: width 3s linear;
+    -ms-transition: width 3s linear;
+    -o-transition: width 3s linear;
+    transition: width 3s linear;
+}

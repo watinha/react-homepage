@@ -1,0 +1,50 @@
+/* iphone fixes */
+@media all and (max-width: 480px) {
+    body{
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .header .contact li{
+        display: block-inline;
+        margin: 0 7px;
+    }
+    .header .contact {
+        text-align: center;
+    }
+    .header .contact .label {
+        display: none;
+    }
+    .header .contact .icon {
+        width: 36px;
+        height: 36px;
+        background-size: 295px 40px;
+    }
+    .header .contact .icon.linkedin {
+        background-position: -3px 0;
+    }
+    .header .contact .icon.github {
+        background-position: 251px 0;
+    }
+    .header .contact .icon.lattes {
+        background-position: -81px 0;
+    }
+    .header .contact .icon.twitter {
+        background-position: -118px 0;
+    }
+    .header .contact .icon.researchgate {
+        background-position: -158px 0;
+    }
+    .columns{
+        width: 100%;
+        float: none;
+        position: relative;
+        bottom: 1em;
+    }
+    .wrapper > * {
+        padding: 0 9px;
+    }
+    .header .layout_switcher {
+        display: none;
+    }
+}
