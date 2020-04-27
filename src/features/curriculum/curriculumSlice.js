@@ -23,6 +23,7 @@ export default curriculumSlice.reducer;
 export const curriculumActions = curriculumSlice.actions;
 export const map_loading = (state) => state.curriculum.loading;
 export const map_curriculum = (state) => state.curriculum.curriculum;
+export const map_title = (state) => state.curriculum.curriculum.title;
 export const loadCurriculum = () => {
     return async (dispatch) => {
         dispatch(curriculumActions.load_start());

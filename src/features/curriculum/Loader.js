@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { map_loading } from './features/curriculum/curriculumSlice';
+import { map_loading } from './curriculumSlice';
 import './loader.css';
 
 export default function Loader () {
