@@ -16,5 +16,6 @@ it('renders the main element of the component', () => {
         <Provider store={store}>
             <App />
         </Provider>, container);
-    expect(container.querySelectorAll('.App').length).toBe(1);
+    expect(container.querySelectorAll('.App').length)
+        .toBe(1);
 });

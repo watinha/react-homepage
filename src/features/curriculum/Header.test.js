@@ -31,13 +31,21 @@ it('renders a loader as ajax is started', async () => {
     axios.get.mockRestore();
 });
 
-it('renders a header and do not show loader after ajax succeeds', async () => {
+it('renders a header and do not show loader ' +
+    'after ajax succeeds', async () => {
     const response = Promise.resolve({
         data: {
             title: 'some title', address: 'somewhere',
             contacts: [
-                { link: 'http://bar.cool', label: 'bar', icon_label: 'cool' },
-                { link: 'http://another.cool', label: 'superbar', icon_label: 'nothing' }
+                {
+                    link: 'http://bar.cool',
+                    label: 'bar', icon_label: 'cool'
+                },
+                {
+                    link: 'http://another.cool',
+                    label: 'superbar',
+                    icon_label: 'nothing'
+                }
             ]
         } });
     jest.spyOn(axios, 'get').mockImplementation((url) => {
@@ -68,7 +76,10 @@ it('renders a header with different value', async () => {
     const response = Promise.resolve({ data: {
         title: 'another', address: 'under the rainbow',
         contacts: [
-            { link: 'http://foo.bar', label: 'foo', icon_label: 'another' }
+            {
+                link: 'http://foo.bar',
+                label: 'foo', icon_label: 'another'
+            }
         ]
     } });
     jest.spyOn(axios, 'get').mockImplementation((url) => {

@@ -19,18 +19,20 @@ export default function Header () {
         <header className="header">
             <Loader />
 			<h1>{title}</h1>
-            <p className="address">{ReactHtmlParser(address)}</p>
+            <p className="address">
+                {ReactHtmlParser(address)}
+            </p>
             <ul className="contact">
-            {contact && contact.map((con, id) => {
-                return (
-                    <li key={id}>
-                        <a href={con.link}>
-                            <span className={"icon " + con.icon_label}></span>
-                            <span className="label">{con.label}</span>
-                        </a>
-                    </li>
-                );
-            })}
+            {contact && contact.map((con, id) =>
+                <li key={id}>
+                    <a href={con.link}>
+                        <span className={"icon " +
+                            con.icon_label}></span>
+                        <span className="label">
+                            {con.label}</span>
+                    </a>
+                </li>
+            )}
             </ul>
             <hr className="headerLongerLine" />
         </header>
