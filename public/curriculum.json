@@ -46,10 +46,10 @@
         {
             "title": "profile",
             "headline": "Professional profile",
-            "paragraphs": [
-                {"paragraph": "Front-end developer experienced in the use of cutting edge technologies, with the objective of allowing rich interactions for users in the Web, exercising Web 2.0 and HTML5 core concepts."},
-                {"paragraph": "Specialist in Web Engineering practices such as Continuous Integration, Continuous Delivery and Test-Driven Design; for assuring the quality of large scale web projects."},
-                {"paragraph": "Advanced knowledge in the area of computer interfaces design, with experience in the field of Web accessibility and usability issues."}
+            "list": [
+                {"description": "Front-end developer experienced in the use of cutting edge technologies, with the objective of allowing rich interactions for users in the Web, exercising Web 2.0 and HTML5 core concepts."},
+                {"description": "Specialist in Web Engineering practices such as Continuous Integration, Continuous Delivery and Test-Driven Design; for assuring the quality of large scale web projects."},
+                {"description": "Advanced knowledge in the area of computer interfaces design, with experience in the field of Web accessibility and usability issues."}
             ]
         },
         {

@@ -52,7 +52,7 @@ it('should render tab panel component with one section',
     const sections = container.querySelectorAll('section'),
           h2 = container.querySelectorAll('h2'),
           section_body = container.querySelectorAll(
-              'section > .section_body');
+              'section > .panel');
     expect(sections.length).toBe(1);
     expect(sections[0].className).toBe('introduction');
     expect(h2.length).toBe(1);
@@ -89,8 +89,9 @@ it('should render tab panel component with three section',
     const sections = container.querySelectorAll('section'),
           h2 = container.querySelectorAll('h2'),
           h3 = container.querySelectorAll('h3'),
+          hr = container.querySelectorAll('hr'),
           section_body = container.querySelectorAll(
-              'section > .section_body');
+              'section > .panel');
     expect(sections.length).toBe(3);
     expect(sections[0].className).toBe('introduction');
     expect(sections[1].className).toBe('other');
@@ -101,4 +102,5 @@ it('should render tab panel component with three section',
     expect(h3[0].innerHTML).toBe('nothing');
     expect(h3[1].innerHTML).toBe('integer');
     expect(section_body.length).toBe(3);
+    expect(hr.length).toBe(2);
 });
