@@ -18,4 +18,49 @@ it('renders the main element of the component', () => {
         </Provider>, container);
     expect(container.querySelectorAll('.App').length)
         .toBe(1);
+    expect(container.querySelectorAll('header').length)
+        .toBe(1);
+});
+
+it('renders a loader as ajax is started', async () => {
+    const response = new Promise(() => {});
+    jest.spyOn(axios, 'get').mockImplementation((url) => {
+        expect(url).toBe('./curriculum.json');
+        return response;
+    });
+
+    act(() => {
+        render(
+            <Provider store={store}>
+                <App />
+            </Provider>, container);
+    });
+
+    let loading = container.querySelectorAll('.loader.show');
+    expect(loading.length).toBe(1);
+
+    axios.get.mockRestore();
+});
+
+it('renders do not show loader ' +
+    'after ajax succeeds', async () => {
+    const response = Promise.resolve({
+        data: {
+        } });
+    jest.spyOn(axios, 'get').mockImplementation((url) => {
+        expect(url).toBe('./curriculum.json');
+        return response;
+    });
+
+    await act(async () => {
+        render(
+            <Provider store={store}>
+                <App />
+            </Provider>, container);
+    });
+
+    let loading = container.querySelectorAll('.loader.show');
+    expect(loading.length).toBe(0);
+
+    axios.get.mockRestore();
 });
