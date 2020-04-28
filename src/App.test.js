@@ -64,3 +64,32 @@ it('renders do not show loader ' +
 
     axios.get.mockRestore();
 });
+
+it('renders show title and sections', async () => {
+    const response = Promise.resolve({
+        data: {
+            title: 'abobrinha - super',
+            sections: [
+                { headline: 'legal', title: 'outra' } ]
+        } });
+    jest.spyOn(axios, 'get').mockImplementation((url) => {
+        expect(url).toBe('./curriculum.json');
+        return response;
+    });
+
+    await act(async () => {
+        render(
+            <Provider store={store}>
+                <App />
+            </Provider>, container);
+    });
+
+    let main = container.innerHTML;
+    expect(main.search('abobrinha - super'))
+        .toBeGreaterThan(0)
+    expect(main.search('legal'))
+        .toBeGreaterThan(0)
+    expect(main.search('outra'))
+        .toBeGreaterThan(0)
+    axios.get.mockRestore();
+});

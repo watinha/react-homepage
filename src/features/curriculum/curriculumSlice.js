@@ -26,6 +26,7 @@ export const map_curriculum = (state) => state.curriculum.curriculum;
 export const map_title = (state) => state.curriculum.curriculum.title;
 export const map_address = (state) => state.curriculum.curriculum.address;
 export const map_contact = (state) => state.curriculum.curriculum.contacts;
+export const map_sections = (state) => state.curriculum.curriculum.sections;
 export const loadCurriculum = () => {
     return async (dispatch) => {
         dispatch(curriculumActions.load_start());

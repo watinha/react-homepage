@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import Header from './features/curriculum/Header';
 import Loader from './features/curriculum/Loader';
+import TabPanel from './features/curriculum/TabPanel';
 import { loadCurriculum }
     from './features/curriculum/curriculumSlice';
 
@@ -22,6 +23,7 @@ function App() {
         <div className="App">
             <Loader />
             <Header />
+            <TabPanel />
         </div>
     );
 }
