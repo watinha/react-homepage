@@ -31,7 +31,7 @@ export default function Panel (props) {
         </div>;
 
     return (
-        <div className="panel">
+        <div className="panel" role="tabpanel" aria-hidden="true">
             {section.paragraph && <p className={section.title}>
                 {section.paragraph}</p>}
             {section.list && renderList(section.list)}

@@ -21,7 +21,7 @@ function App() {
     });
 
     return (
-        <div className={`App ${view}`}>
+        <div className={`App ${view}`} role="main">
             <Loader />
             <Header />
             <hr className="headerLongerLine" />

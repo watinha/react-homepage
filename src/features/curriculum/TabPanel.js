@@ -25,7 +25,7 @@ export default function TabPanel () {
     };
 
     return (
-        <div className="wrapper">
+        <div className="wrapper" role="tablist">
 
         <button className="layout_switcher"
                 onClick={() => toggle_view()}
@@ -41,9 +41,15 @@ export default function TabPanel () {
              onClick={() => activate(id)}>
             <section className={section.title}>
                 {section.title === 'introduction' &&
-                    <h2>{section.headline}</h2>}
+                    <h2 role="tab"
+                        tabIndex={id === 0 ? 0 : -1}>
+                        {section.headline}
+                    </h2>}
                 {section.title !== 'introduction' &&
-                    <h3>{section.headline}</h3>}
+                    <h3 role="tab"
+                        tabIndex={id === 0 ? 0 : -1}>
+                        {section.headline}
+                    </h3>}
                 <Panel section={section}/>
             </section>
             {id < 2 && <hr />}

@@ -13,13 +13,22 @@ beforeEach(() => {
     container = document.createElement('div');
 });
 
-it('renders the main element of the component', () => {
-    render(
-        <Provider store={store}>
-            <App />
-        </Provider>, container);
+it('renders the main element of the component', async () => {
+    const response = new Promise(() => {});
+    jest.spyOn(axios, 'get').mockImplementation((url) => {
+        expect(url).toBe('./curriculum.json');
+        return response;
+    });
+    await act(async () => {
+        render(
+            <Provider store={store}>
+                <App />
+            </Provider>, container);
+    });
     expect(container.querySelectorAll('.App.files').length)
         .toBe(1);
+    expect(container.querySelectorAll(
+            '.files[role="main"]').length).toBe(1);
     expect(container.querySelectorAll('header').length)
         .toBe(1);
 });
