@@ -80,3 +80,62 @@ it('should contain tablist, tab and tabpanel roles (3)',
     expect(panels[2].getAttribute('aria-hidden'))
                 .toBe("true");
 });
+
+it('should, after enter key, activate associated panel',
+        async () => {
+    const curriculum = {
+        sections: [
+            { title: 'introduction', headline: 'bar' },
+            { title: 'b2', headline: 'a' },
+            { title: 'c', headline: 'c' },
+        ]
+    };
+    await act(async () => {
+        render(
+            <Provider store={store}>
+                <TabPanel />
+            </Provider>
+        , container);
+        store.dispatch(curriculumActions.set(curriculum));
+    });
+
+    const tabs = container.querySelectorAll(
+                '*[role="tab"]'),
+          panels = container.querySelectorAll(
+                '*[role="tabpanel"]'),
+          divs = container.querySelectorAll(
+                '.wrapper > div');
+
+    const dispatch_event = async (keyCode, index, hidden, focused) => {
+        await act(async () => {
+            tabs[index].focus();
+            Simulate.keyPress(tabs[index], {
+                key: "Enter", keyCode: keyCode,
+                which: keyCode});
+        });
+
+        tabs.forEach((tab, id) => {
+            if (focused === id)
+                expect(tab.tabIndex).toBe(0);
+            else
+                expect(tab.tabIndex).toBe(-1);
+        });
+
+        panels.forEach((panel, id) => {
+            if (hidden === id)
+                expect(panel.getAttribute('aria-hidden'))
+                            .toBe("false");
+            else
+                expect(panel.getAttribute('aria-hidden'))
+                            .toBe("true");
+        });
+        divs.forEach((div, id) => {
+            if (hidden === id)
+                expect(div.className).toBe('diagonal open');
+            else
+                expect(div.className).toBe('diagonal');
+        });
+    };
+
+    await dispatch_event(13, 0, 0, 0);
+});

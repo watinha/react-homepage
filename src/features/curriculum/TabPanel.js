@@ -42,15 +42,19 @@ export default function TabPanel () {
             <section className={section.title}>
                 {section.title === 'introduction' &&
                     <h2 role="tab"
-                        tabIndex={id === 0 ? 0 : -1}>
+                        tabIndex={id === 0 ? 0 : -1}
+                        onKeyPress={() => activate(id)}>
                         {section.headline}
                     </h2>}
                 {section.title !== 'introduction' &&
                     <h3 role="tab"
-                        tabIndex={id === 0 ? 0 : -1}>
+                        tabIndex={id === 0 ? 0 : -1}
+                        onKeyPress={() => activate(id)}>
                         {section.headline}
                     </h3>}
-                <Panel section={section}/>
+                <Panel section={section}
+                       hidden={selected === id ?
+                           "false" : "true"} />
             </section>
             {id < 2 && <hr />}
         </div>

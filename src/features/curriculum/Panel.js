@@ -2,7 +2,8 @@ import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
 export default function Panel (props) {
-    const section = props.section;
+    const section = props.section,
+          hidden = props.hidden;
 
     const renderList = (list) =>
         <ul>
@@ -31,7 +32,7 @@ export default function Panel (props) {
         </div>;
 
     return (
-        <div className="panel" role="tabpanel" aria-hidden="true">
+        <div className="panel" role="tabpanel" aria-hidden={hidden}>
             {section.paragraph && <p className={section.title}>
                 {section.paragraph}</p>}
             {section.list && renderList(section.list)}
