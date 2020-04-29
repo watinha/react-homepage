@@ -23,6 +23,7 @@ function App() {
         <div className="App files">
             <Loader />
             <Header />
+            <hr className="headerLongerLine" />
             <TabPanel />
         </div>
     );

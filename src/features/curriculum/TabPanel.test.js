@@ -25,7 +25,7 @@ it('should render tab panel component with no sections',
         store.dispatch(curriculumActions.set(curriculum));
     });
 
-    const main = container.querySelectorAll('div.'),
+    const main = container.querySelectorAll('div.wrapper'),
           sections = container.querySelectorAll('section');
     expect(main.length).toBe(1);
     expect(sections.length).toBe(0);
@@ -103,4 +103,44 @@ it('should render tab panel component with three section',
     expect(h3[1].innerHTML).toBe('integer');
     expect(section_body.length).toBe(3);
     expect(hr.length).toBe(2);
+});
+
+it('should render set initial style to sections',
+        async () => {
+    const curriculum = {
+        sections: [
+            {
+                title: 'introduction',
+                headline: 'bar'
+            },
+            {
+                title: 'other',
+                headline: 'nothing'
+            },
+            {
+                title: 'ism',
+                headline: 'integer'
+            }
+        ]
+    };
+    await act(async () => {
+        render(
+            <Provider store={store}>
+                <TabPanel />
+            </Provider>, container);
+        store.dispatch(curriculumActions.set(curriculum));
+    });
+
+    const sections = container.querySelectorAll(
+            '.wrapper > div');
+    expect(sections.length).toBe(3);
+    expect(sections[0].style.cssText).toBe(
+        "transform: scale(0.73) matrix(1, 0, 0, 1, 0, 0);" +
+        " left: 7.7%; margin-top: -4%;");
+    expect(sections[1].style.cssText).toBe(
+        "transform: scale(0.86) matrix(1, 0, 0, 1, 0, 0);" +
+        " left: 10.4%; margin-top: -4%;");
+    expect(sections[2].style.cssText).toBe(
+        "transform: scale(1) matrix(1, 0, 0, 1, 0, 0);" +
+        " left: 13.1%; margin-top: -4%;");
 });

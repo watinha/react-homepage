@@ -28,7 +28,6 @@ export default function Header () {
                 </li>
             )}
             </ul>
-            <hr className="headerLongerLine" />
         </header>
     );
 }

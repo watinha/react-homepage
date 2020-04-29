@@ -235,7 +235,7 @@
 .files .header+hr {
     display: block;
     width: 0%;
-    margin-bottom: 20px;
+    margin-bottom: 3%;
 
     /* transitions */
     -webkit-transition: width 3s linear;
