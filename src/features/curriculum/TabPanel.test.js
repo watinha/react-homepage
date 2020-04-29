@@ -25,7 +25,7 @@ it('should render tab panel component with no sections',
         store.dispatch(curriculumActions.set(curriculum));
     });
 
-    const main = container.querySelectorAll('div'),
+    const main = container.querySelectorAll('div.'),
           sections = container.querySelectorAll('section');
     expect(main.length).toBe(1);
     expect(sections.length).toBe(0);

@@ -8,7 +8,7 @@ export default function TabPanel () {
     const sections = useSelector(map_sections);
 
     return (
-        <div>
+        <div className="wrapper">
         {sections && sections.map((section, id) =>
         <div key={id}>
             <section className={section.title}>

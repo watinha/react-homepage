@@ -16,7 +16,7 @@ it('renders the main element of the component', () => {
         <Provider store={store}>
             <App />
         </Provider>, container);
-    expect(container.querySelectorAll('.App').length)
+    expect(container.querySelectorAll('.App.files').length)
         .toBe(1);
     expect(container.querySelectorAll('header').length)
         .toBe(1);

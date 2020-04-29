@@ -20,7 +20,7 @@ function App() {
     });
 
     return (
-        <div className="App">
+        <div className="App files">
             <Loader />
             <Header />
             <TabPanel />
