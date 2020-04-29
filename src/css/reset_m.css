@@ -44,7 +44,7 @@
     .wrapper > * {
         padding: 0 9px;
     }
-    .header .layout_switcher {
+    .wrapper .layout_switcher {
         display: none;
     }
 }

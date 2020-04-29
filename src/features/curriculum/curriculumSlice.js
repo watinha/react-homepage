@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const curriculumSlice = createSlice({
     name: 'curriculum',
-    initialState: { loading: false, curriculum: {} },
+    initialState: { loading: false, curriculum: {}, view: 'files' },
     reducers: {
         load_start: (state, action) => {
             state.loading = true;
@@ -16,6 +16,10 @@ export const curriculumSlice = createSlice({
         set: (state, action) => {
             state.curriculum = action.payload;
             return state;
+        },
+        print_view: (state) => {
+            state.view = '';
+            return state;
         }
     },
 });
@@ -27,6 +31,7 @@ export const map_title = (state) => state.curriculum.curriculum.title;
 export const map_address = (state) => state.curriculum.curriculum.address;
 export const map_contact = (state) => state.curriculum.curriculum.contacts;
 export const map_sections = (state) => state.curriculum.curriculum.sections;
+export const map_view = (state) => state.curriculum.view;
 export const loadCurriculum = () => {
     return async (dispatch) => {
         dispatch(curriculumActions.load_start());

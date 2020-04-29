@@ -16,7 +16,7 @@
 }
 
 /* standard layout */
-.files > .wrapper > * {
+.files > .wrapper > *:not(.layout_switcher) {
     border: medium solid rgb(187, 187, 187);
     padding: 0 30px;
     cursor: pointer;
@@ -252,6 +252,6 @@
 .files > .wrapper > * {
     clear: none;
 }
-.files .header .icon.reset_layout {
+.files .wrapper .icon.reset_layout {
     background-position: -104px 0;
 }

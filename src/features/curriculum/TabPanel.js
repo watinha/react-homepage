@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { map_sections } from './curriculumSlice';
+import { curriculumActions, map_sections }
+    from './curriculumSlice';
 import Panel from './Panel';
 
 export default function TabPanel () {
     const sections = useSelector(map_sections),
+          dispatch = useDispatch(),
           [view, setView] = useState(standard_view),
           [selected, setSelected] = useState(-1);
 
@@ -14,8 +16,20 @@ export default function TabPanel () {
         setSelected(id);
     };
 
+    const reset = () => {
+        setView(print_view);
+        dispatch(curriculumActions.print_view());
+    };
+
     return (
         <div className="wrapper">
+
+        <button className="layout_switcher"
+                onClick={() => reset()}
+                aria-label="print version">
+            <span className="icon reset_layout" />
+        </button>
+
         {sections && sections.map((section, id) =>
         <div key={id}
              className={view.generate_class(id, selected)}
@@ -63,6 +77,15 @@ const diagonal_view = (() => {
             const bottom = 50 * id - 10;
             if (id === selected)
                 return {marginTop: 0, bottom: `${bottom}px`};
+            return { marginTop: 0 };
+        }
+    };
+})();
+
+const print_view = (() => {
+    return {
+        generate_class: () => "",
+        generate_style: () => {
             return { marginTop: 0 };
         }
     };

@@ -58,6 +58,9 @@ it('should render tab panel component with one section',
     expect(h2.length).toBe(1);
     expect(h2[0].innerHTML).toBe('bar');
     expect(section_body.length).toBe(1);
+
+    expect(store.getState().curriculum.view)
+            .toBe('files');
 });
 
 it('should render tab panel component with three section',
@@ -103,6 +106,9 @@ it('should render tab panel component with three section',
     expect(h3[1].innerHTML).toBe('integer');
     expect(section_body.length).toBe(3);
     expect(hr.length).toBe(2);
+
+    expect(store.getState().curriculum.view)
+            .toBe('files');
 });
 
 it('should render set initial style to sections',
@@ -235,4 +241,45 @@ it('should change layout after click in other element',
     expect(sections[1].className).toBe(
         "diagonal open");
     expect(sections[2].className).toBe("diagonal");
+});
+
+it('should show print layout after clicking button',
+        async () => {
+    const curriculum = {
+        sections: [
+            { title: 'a', headline: 'b' },
+            { title: 'other', headline: 'nothing' },
+            { title: 'ism', headline: 'integer' }
+        ]
+    };
+    await act(async () => {
+        render(
+            <Provider store={store}>
+                <TabPanel />
+            </Provider>, container);
+        store.dispatch(curriculumActions.set(curriculum));
+    });
+
+    const sections = container.querySelectorAll(
+            '.wrapper > div'),
+          print_button = container.querySelectorAll(
+            '.wrapper button');
+
+    expect(print_button.length).toBe(1);
+    await act(async () => {
+        Simulate.click(print_button[0]);
+    });
+
+    expect(sections[0].style.cssText).toBe(
+        "margin-top: 0px;");
+    expect(sections[1].style.cssText).toBe(
+        "margin-top: 0px;");
+    expect(sections[2].style.cssText).toBe(
+        "margin-top: 0px;");
+    expect(sections[0].className).toBe("");
+    expect(sections[1].className).toBe("");
+    expect(sections[2].className).toBe("");
+
+    expect(store.getState().curriculum.view)
+            .toBe('');
 });

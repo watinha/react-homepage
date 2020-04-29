@@ -1,10 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { act } from 'react-dom/test-utils';
+import { act, Simulate } from 'react-dom/test-utils';
 import axios from 'axios';
 import store from './app/store';
 import App from './App';
+import { curriculumActions }
+    from './features/curriculum/curriculumSlice';
 
 let container = null;
 beforeEach(() => {
@@ -91,5 +93,28 @@ it('renders show title and sections', async () => {
         .toBeGreaterThan(0)
     expect(main.search('outra'))
         .toBeGreaterThan(0)
+    axios.get.mockRestore();
+});
+
+it('changes view depending on view state', async () => {
+    const response = Promise.resolve({
+        data: {
+        } });
+    jest.spyOn(axios, 'get').mockImplementation((url) => {
+        expect(url).toBe('./curriculum.json');
+        return response;
+    });
+
+    await act(async () => {
+        render(
+            <Provider store={store}>
+                <App />
+            </Provider>, container);
+        store.dispatch(curriculumActions.print_view());
+    });
+
+    let div = container.querySelector('div');
+    expect(div.className).toBe('App ');
+
     axios.get.mockRestore();
 });

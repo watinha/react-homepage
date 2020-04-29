@@ -69,6 +69,7 @@ span.bold{
     display: inline-block;
     margin: 0 7px;
 }
+.wrapper .icon,
 .header .icon,
 .header .contact .icon {
     position: relative;
@@ -96,27 +97,33 @@ span.bold{
 .header .contact .icon.researchgate {
     background-position: -79px 0;
 }
+.wrapper .icon.reset_layout,
 .header .icon.reset_layout {
     background-position: -125px -1px;
 }
+.wrapper { position: relative; }
 .wrapper > * {
     clear:both;
 }
-.header .layout_switcher {
-    position: absolute;
+.files .wrapper .layout_switcher {
     top: 0;
+}
+.wrapper .layout_switcher {
+    top: -10px;
+    position: absolute;
     right: 5%;
     display: block;
     padding: 0 0 3px;
+    transition: all linear 0.3s;
 }
-.header .layout_switcher .icon {
+.wrapper .layout_switcher .icon {
     margin-right: 0;
 }
 .header {
     position: relative;
 }
 @media print {
-    .header .layout_switcher {
+    .wrapper .layout_switcher {
         display: none;
     }
     .header .contact {
