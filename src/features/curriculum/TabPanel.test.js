@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { act, Simulate } from 'react-dom/test-utils';
 import { Provider } from 'react-redux';
 
 import store from '../../app/store';
@@ -143,4 +143,96 @@ it('should render set initial style to sections',
     expect(sections[2].style.cssText).toBe(
         "transform: scale(1) matrix(1, 0, 0, 1, 0, 0);" +
         " left: 13.1%; margin-top: -4%;");
+});
+
+it('should change layout presentation after click',
+        async () => {
+    const curriculum = {
+        sections: [
+            {
+                title: 'introduction',
+                headline: 'bar'
+            },
+            {
+                title: 'other',
+                headline: 'nothing'
+            },
+            {
+                title: 'ism',
+                headline: 'integer'
+            }
+        ]
+    };
+    await act(async () => {
+        render(
+            <Provider store={store}>
+                <TabPanel />
+            </Provider>, container);
+        store.dispatch(curriculumActions.set(curriculum));
+    });
+
+    const sections = container.querySelectorAll(
+            '.wrapper > div');
+    expect(sections.length).toBe(3);
+
+    await act(async () => {
+        Simulate.click(sections[0]);
+    });
+
+    expect(sections[0].style.cssText).toBe(
+        "margin-top: 0px; bottom: -10px;");
+    expect(sections[1].style.cssText).toBe(
+        "margin-top: 0px;");
+    expect(sections[2].style.cssText).toBe(
+        "margin-top: 0px;");
+    expect(sections[0].className).toBe(
+        "diagonal open");
+    expect(sections[1].className).toBe("diagonal");
+    expect(sections[2].className).toBe("diagonal");
+});
+
+it('should change layout after click in other element',
+        async () => {
+    const curriculum = {
+        sections: [
+            {
+                title: 'introduction',
+                headline: 'bar'
+            },
+            {
+                title: 'other',
+                headline: 'nothing'
+            },
+            {
+                title: 'ism',
+                headline: 'integer'
+            }
+        ]
+    };
+    await act(async () => {
+        render(
+            <Provider store={store}>
+                <TabPanel />
+            </Provider>, container);
+        store.dispatch(curriculumActions.set(curriculum));
+    });
+
+    const sections = container.querySelectorAll(
+            '.wrapper > div');
+    expect(sections.length).toBe(3);
+
+    await act(async () => {
+        Simulate.click(sections[1]);
+    });
+
+    expect(sections[0].style.cssText).toBe(
+        "margin-top: 0px;");
+    expect(sections[1].style.cssText).toBe(
+        "margin-top: 0px; bottom: 40px;");
+    expect(sections[2].style.cssText).toBe(
+        "margin-top: 0px;");
+    expect(sections[0].className).toBe("diagonal");
+    expect(sections[1].className).toBe(
+        "diagonal open");
+    expect(sections[2].className).toBe("diagonal");
 });
