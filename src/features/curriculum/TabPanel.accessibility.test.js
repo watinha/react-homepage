@@ -10,6 +10,10 @@ import { curriculumActions } from './curriculumSlice';
 let container;
 beforeEach(() => {
     container = document.createElement('div');
+    document.body.appendChild(container);
+});
+afterEach(() => {
+    document.body.removeChild(container);
 });
 
 it('should contain tablist, tab and tabpanel roles (1)',
@@ -106,11 +110,12 @@ it('should, after enter key, activate associated panel',
           divs = container.querySelectorAll(
                 '.wrapper > div');
 
-    const dispatch_event = async (keyCode, index, hidden, focused) => {
+    const dispatch_event = async (keyCode, key, index, hidden, focused) => {
         await act(async () => {
             tabs[index].focus();
-            Simulate.keyPress(tabs[index], {
-                key: "Enter", keyCode: keyCode,
+            Simulate.keyDown(tabs[index], {
+                key: key, keyCode: keyCode,
+                charCode: keyCode,
                 which: keyCode});
         });
 
@@ -137,5 +142,9 @@ it('should, after enter key, activate associated panel',
         });
     };
 
-    await dispatch_event(13, 0, 0, 0);
+    await dispatch_event(13, 'enter', 0, 0, 0); // enter
+    await dispatch_event(40, 'down', 0, 0, 1); // press down
+    expect(document.activeElement).toBe(tabs[1]);
+    await dispatch_event(40, 'down', 1, 0, 2); // press down
+    expect(document.activeElement).toBe(tabs[2]);
 });

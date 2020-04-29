@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { curriculumActions, map_sections }
@@ -9,7 +9,36 @@ export default function TabPanel () {
     const sections = useSelector(map_sections),
           dispatch = useDispatch(),
           [view, setView] = useState(standard_view),
-          [selected, setSelected] = useState(-1);
+          [selected, setSelected] = useState(-1),
+          [focused, setFocused] = useState(0),
+          focusedTab = useRef();
+
+    useEffect(() => {
+        if (focusedTab.current)
+            focusedTab.current.focus();
+    }, [focused]);
+
+    const render_tab = (id, section) => {
+        if (id === focused) {
+            return (
+                <h2 role="tab"
+                    tabIndex={id === focused ? 0 : -1}
+                    ref={focusedTab}
+                    onKeyDown={(ev) => navigate(id,ev)}>
+                    {section.headline}
+                </h2>
+            );
+        }
+        else {
+            return (
+                <h2 role="tab"
+                    tabIndex={id === focused ? 0 : -1}
+                    onKeyDown={(ev) => navigate(id,ev)}>
+                    {section.headline}
+                </h2>
+            );
+        }
+    };
 
     const activate = (id) => {
         setView(diagonal_view);
@@ -22,6 +51,21 @@ export default function TabPanel () {
         else
             setView(print_view);
         dispatch(curriculumActions.toggle_view());
+    };
+
+    const navigate = (id, ev) => {
+        switch (ev.keyCode) {
+            case 13:
+                activate(id);
+                break;
+            case 40:
+                if (focused + 1 < sections.length) {
+                    setFocused(focused + 1);
+                }
+                break;
+            default:
+                break;
+        }
     };
 
     return (
@@ -40,18 +84,7 @@ export default function TabPanel () {
                  id, sections.length, selected)}
              onClick={() => activate(id)}>
             <section className={section.title}>
-                {section.title === 'introduction' &&
-                    <h2 role="tab"
-                        tabIndex={id === 0 ? 0 : -1}
-                        onKeyPress={() => activate(id)}>
-                        {section.headline}
-                    </h2>}
-                {section.title !== 'introduction' &&
-                    <h3 role="tab"
-                        tabIndex={id === 0 ? 0 : -1}
-                        onKeyPress={() => activate(id)}>
-                        {section.headline}
-                    </h3>}
+                {render_tab(id, section)}
                 <Panel section={section}
                        hidden={selected === id ?
                            "false" : "true"} />
