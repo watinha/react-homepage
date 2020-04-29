@@ -283,3 +283,54 @@ it('should show print layout after clicking button',
     expect(store.getState().curriculum.view)
             .toBe('');
 });
+
+it('should show restore standard view after clicking again',
+        async () => {
+    const curriculum = {
+        sections: [
+            { title: 'a', headline: 'b' },
+            { title: 'other', headline: 'nothing' },
+            { title: 'ism', headline: 'integer' }
+        ]
+    };
+    await act(async () => {
+        render(
+            <Provider store={store}>
+                <TabPanel />
+            </Provider>, container);
+        store.dispatch(curriculumActions.set(curriculum));
+        store.dispatch(curriculumActions.toggle_view());
+    });
+
+    const sections = container.querySelectorAll(
+            '.wrapper > div'),
+          print_button = container.querySelectorAll(
+            '.wrapper button');
+
+    expect(print_button.length).toBe(1);
+    await act(async () => {
+        Simulate.click(print_button[0]);
+    });
+    await act(async () => {
+        Simulate.click(print_button[0]);
+    });
+
+    expect(sections[0].style.cssText).toBe(
+        "margin-top: -4%;" +
+        " transform: scale(0.73) matrix(1, 0, 0, 1, 0, 0);" +
+        " left: 7.7%;");
+    expect(sections[1].style.cssText).toBe(
+        "margin-top: -4%;" +
+        " transform: scale(0.86) matrix(1, 0, 0, 1, 0, 0);" +
+        " left: 10.4%;");
+    expect(sections[2].style.cssText).toBe(
+        "margin-top: -4%;" +
+        " transform: scale(1) matrix(1, 0, 0, 1, 0, 0);" +
+        " left: 13.1%;");
+    expect(sections[0].className).toBe("");
+    expect(sections[1].className).toBe("");
+    expect(sections[2].className).toBe("");
+
+    expect(store.getState().curriculum.view)
+            .toBe('files');
+});

@@ -110,7 +110,7 @@ it('changes view depending on view state', async () => {
             <Provider store={store}>
                 <App />
             </Provider>, container);
-        store.dispatch(curriculumActions.print_view());
+        store.dispatch(curriculumActions.toggle_view());
     });
 
     let div = container.querySelector('div');

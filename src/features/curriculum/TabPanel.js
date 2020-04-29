@@ -16,16 +16,19 @@ export default function TabPanel () {
         setSelected(id);
     };
 
-    const reset = () => {
-        setView(print_view);
-        dispatch(curriculumActions.print_view());
+    const toggle_view = () => {
+        if (view === print_view)
+            setView(standard_view);
+        else
+            setView(print_view);
+        dispatch(curriculumActions.toggle_view());
     };
 
     return (
         <div className="wrapper">
 
         <button className="layout_switcher"
-                onClick={() => reset()}
+                onClick={() => toggle_view()}
                 aria-label="print version">
             <span className="icon reset_layout" />
         </button>

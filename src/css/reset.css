@@ -101,15 +101,12 @@ span.bold{
 .header .icon.reset_layout {
     background-position: -125px -1px;
 }
-.wrapper { position: relative; }
 .wrapper > * {
     clear:both;
 }
-.files .wrapper .layout_switcher {
-    top: 0;
-}
+.App { position: relative; }
 .wrapper .layout_switcher {
-    top: -10px;
+    top: 0px;
     position: absolute;
     right: 5%;
     display: block;

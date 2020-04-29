@@ -17,8 +17,8 @@ export const curriculumSlice = createSlice({
             state.curriculum = action.payload;
             return state;
         },
-        print_view: (state) => {
-            state.view = '';
+        toggle_view: (state) => {
+            state.view = state.view === '' ? 'files' : '';
             return state;
         }
     },
