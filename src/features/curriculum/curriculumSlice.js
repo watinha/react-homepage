@@ -1,9 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const CURRICULUM = {
+    FILE_CLASS: 'files',
+    JSON_URL: './curriculum.json'
+};
+
 export const curriculumSlice = createSlice({
     name: 'curriculum',
-    initialState: { loading: false, curriculum: {}, view: 'files' },
+    initialState: { loading: false, curriculum: {}, view: CURRICULUM.FILE_CLASS },
     reducers: {
         load_start: (state, action) => {
             state.loading = true;
@@ -18,7 +23,7 @@ export const curriculumSlice = createSlice({
             return state;
         },
         toggle_view: (state) => {
-            state.view = state.view === '' ? 'files' : '';
+            state.view = state.view === '' ? CURRICULUM.FILE_CLASS : '';
             return state;
         }
     },
@@ -35,7 +40,7 @@ export const map_view = (state) => state.curriculum.view;
 export const loadCurriculum = () => {
     return async (dispatch) => {
         dispatch(curriculumActions.load_start());
-        const response = await axios.get('./curriculum.json');
+        const response = await axios.get(CURRICULUM.JSON_URL);
 		dispatch(curriculumActions.set(response['data']));
         dispatch(curriculumActions.load_end());
     };

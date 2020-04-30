@@ -5,6 +5,16 @@ import { curriculumActions, map_sections }
     from './curriculumSlice';
 import Panel from './Panel';
 
+const TABPANEL = {
+    END_KEY: 35,
+    HOME_KEY: 36,
+    LEFT_KEY: 37,
+    UP_KEY: 38,
+    RIGHT_KEY:39,
+    DOWN_KEY: 40,
+    ENTER_KEY: 13,
+};
+
 export default function TabPanel () {
     const sections = useSelector(map_sections),
           dispatch = useDispatch(),
@@ -66,13 +76,15 @@ export default function TabPanel () {
     };
 
     const navigate = (id, ev) => {
-        if (ev.keyCode === 13)
+        if (ev.keyCode === TABPANEL.ENTER_KEY)
             activate(id);
-        if ((ev.keyCode === 40 || ev.keyCode === 39) &&
-            focused + 1 < sections.length)
+        if ((ev.keyCode === TABPANEL.RIGHT_KEY ||
+             ev.keyCode === TABPANEL.DOWN_KEY) &&
+             focused + 1 < sections.length)
             setFocused(focused + 1);
-        if ((ev.keyCode === 38 || ev.keyCode === 37) &&
-            focused - 1 >= 0)
+        if ((ev.keyCode === TABPANEL.UP_KEY ||
+             ev.keyCode === TABPANEL.LEFT_KEY) &&
+             focused - 1 >= 0)
             setFocused(focused - 1);
         if (ev.keyCode === 35) {
             setFocused(sections.length - 1);
