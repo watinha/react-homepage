@@ -53,7 +53,7 @@
         -ms-transform: matrix(1, 0, 0, 1, 0, 0) !important;
         transform: matrix(1, 0, 0, 1, 0, 0) !important;
         float: none;
-        margin: 20px 0;
+        margin: 20px auto;
         cursor: text;
         z-index: inherit;
         height: 100%;
