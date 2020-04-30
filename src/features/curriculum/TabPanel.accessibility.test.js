@@ -85,7 +85,7 @@ it('should contain tablist, tab and tabpanel roles (3)',
                 .toBe("true");
 });
 
-it('should, after enter key, activate associated panel',
+it('should navigate through eleemnts using keys',
         async () => {
     const curriculum = {
         sections: [
@@ -145,6 +145,21 @@ it('should, after enter key, activate associated panel',
     await dispatch_event(13, 'enter', 0, 0, 0); // enter
     await dispatch_event(40, 'down', 0, 0, 1); // press down
     expect(document.activeElement).toBe(tabs[1]);
-    await dispatch_event(40, 'down', 1, 0, 2); // press down
+    await dispatch_event(39, 'down', 1, 0, 2); // pressright
     expect(document.activeElement).toBe(tabs[2]);
+    await dispatch_event(40, 'down', 2, 0, 2); // press down
+    expect(document.activeElement).toBe(tabs[2]);
+    await dispatch_event(13, 'enter', 2, 2, 2); // enter
+    await dispatch_event(38, 'up', 2, 2, 1); // press up
+    expect(document.activeElement).toBe(tabs[1]);
+    await dispatch_event(37, 'up', 1, 2, 0); // press left
+    expect(document.activeElement).toBe(tabs[0]);
+    await dispatch_event(38, 'up', 0, 2, 0); // press up
+    expect(document.activeElement).toBe(tabs[0]);
+    await dispatch_event(13, 'up', 0, 0, 0); // enter
+
+    await dispatch_event(35, 'end', 0, 2, 2); // end
+    expect(document.activeElement).toBe(tabs[2]);
+    await dispatch_event(34, 'home', 2, 0, 0); // home
+    expect(document.activeElement).toBe(tabs[0]);
 });

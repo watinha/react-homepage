@@ -32,8 +32,12 @@ export default function Panel (props) {
         </div>;
 
     return (
-        <div className="panel" role="tabpanel" aria-hidden={hidden}>
-            {section.paragraph && <p className={section.title}>
+        <div className="panel" role="tabpanel"
+             aria-hidden={hidden}
+             aria-labelledby={`tab_${section.title}`}
+             id={`panel_${section.title}`}>
+            {section.paragraph &&
+                <p className={section.title}>
                 {section.paragraph}</p>}
             {section.list && renderList(section.list)}
             {section.technologies &&

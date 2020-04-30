@@ -23,6 +23,12 @@ export default function TabPanel () {
             return (
                 <h2 role="tab"
                     tabIndex={id === focused ? 0 : -1}
+                    aria-selected={id === selected ?
+                        "true" : "false"}
+                    aria-expanded={id === selected ?
+                        "true" : "false"}
+                    aria-controls={`panel_${section.title}`}
+                    id={`tab_${section.title}`}
                     ref={focusedTab}
                     onKeyDown={(ev) => navigate(id,ev)}>
                     {section.headline}
@@ -33,6 +39,12 @@ export default function TabPanel () {
             return (
                 <h2 role="tab"
                     tabIndex={id === focused ? 0 : -1}
+                    aria-selected={id === selected ?
+                        "true" : "false"}
+                    aria-expanded={id === selected ?
+                        "true" : "false"}
+                    aria-controls={`panel_${section.title}`}
+                    id={`tab_${section.title}`}
                     onKeyDown={(ev) => navigate(id,ev)}>
                     {section.headline}
                 </h2>
@@ -54,17 +66,21 @@ export default function TabPanel () {
     };
 
     const navigate = (id, ev) => {
-        switch (ev.keyCode) {
-            case 13:
-                activate(id);
-                break;
-            case 40:
-                if (focused + 1 < sections.length) {
-                    setFocused(focused + 1);
-                }
-                break;
-            default:
-                break;
+        if (ev.keyCode === 13)
+            activate(id);
+        if ((ev.keyCode === 40 || ev.keyCode === 39) &&
+            focused + 1 < sections.length)
+            setFocused(focused + 1);
+        if ((ev.keyCode === 38 || ev.keyCode === 37) &&
+            focused - 1 >= 0)
+            setFocused(focused - 1);
+        if (ev.keyCode === 35) {
+            setFocused(sections.length - 1);
+            activate(sections.length - 1);
+        }
+        if (ev.keyCode === 34) {
+            setFocused(0);
+            activate(0);
         }
     };
 
@@ -84,7 +100,7 @@ export default function TabPanel () {
                  id, sections.length, selected)}
              onClick={() => activate(id)}>
             <section className={section.title}>
-                {render_tab(id, section)}
+                {render_tab(id, section, selected)}
                 <Panel section={section}
                        hidden={selected === id ?
                            "false" : "true"} />
