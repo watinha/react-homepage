@@ -33,9 +33,9 @@
         transition: none !important;
 
         position: relative;
-        width: 100% !important;
+        width: 73% !important;
         height: 100px;
-        margin-bottom: -15px;
+        margin: 0 auto -15px;
         top: 50px;
         left: 0px !important;
 
