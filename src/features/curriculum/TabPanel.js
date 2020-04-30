@@ -6,6 +6,7 @@ import { curriculumActions, map_sections }
 import Panel from './Panel';
 
 const TABPANEL = {
+    ESC_KEY: 27,
     END_KEY: 35,
     HOME_KEY: 36,
     LEFT_KEY: 37,
@@ -76,6 +77,10 @@ export default function TabPanel () {
     };
 
     const navigate = (id, ev) => {
+        if (ev.keyCode === TABPANEL.ESC_KEY) {
+            setView(standard_view);
+            setSelected(-1);
+        }
         if (ev.keyCode === TABPANEL.ENTER_KEY)
             activate(id);
         if ((ev.keyCode === TABPANEL.RIGHT_KEY ||

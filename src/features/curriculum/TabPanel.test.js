@@ -241,6 +241,57 @@ it('should change layout after click in other element',
     expect(sections[2].className).toBe("diagonal");
 });
 
+it('should restore standard view after pressing ESC',
+        async () => {
+    const curriculum = {
+        sections: [
+            { title: 'introduction', headline: 'bar' },
+            { title: 'other', headline: 'nothing' },
+            { title: 'ism', headline: 'integer' }
+        ]
+    };
+    await act(async () => {
+        render(
+            <Provider store={store}>
+                <TabPanel />
+            </Provider>, container);
+        store.dispatch(curriculumActions.set(curriculum));
+    });
+
+    const sections = container.querySelectorAll(
+            '.wrapper > div');
+    expect(sections.length).toBe(3);
+
+    await act(async () => {
+        Simulate.click(sections[0]);
+    });
+    await act(async () => {
+        Simulate.keyDown(
+            sections[0].querySelector('[role="tab"]'),
+            {
+                keyCode: 27, key: 'esc',
+                which: 27, charCode: 27
+            });
+    });
+
+    expect(sections[0].style.cssText).toBe(
+        "margin-top: -4%;" +
+        " transform: scale(0.73) matrix(1, 0, 0, 1, 0, 0);" +
+        " left: 7.7%;");
+    expect(sections[1].style.cssText).toBe(
+        "margin-top: -4%;" +
+        " transform: scale(0.86) matrix(1, 0, 0, 1, 0, 0);" +
+        " left: 10.4%;");
+    expect(sections[2].style.cssText).toBe(
+        "margin-top: -4%;" +
+        " transform: scale(1) matrix(1, 0, 0, 1, 0, 0);" +
+        " left: 13.1%;");
+    expect(sections[0].className).toBe(
+        "");
+    expect(sections[1].className).toBe("");
+    expect(sections[2].className).toBe("");
+});
+
 it('should show print layout after clicking button',
         async () => {
     const curriculum = {

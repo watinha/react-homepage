@@ -110,7 +110,8 @@ it('should navigate through eleemnts using keys',
           divs = container.querySelectorAll(
                 '.wrapper > div');
 
-    const dispatch_event = async (keyCode, key, index, hidden, focused) => {
+    const dispatch_event = async (keyCode,
+            key, index, hidden, focused) => {
         await act(async () => {
             tabs[index].focus();
             Simulate.keyDown(tabs[index], {
