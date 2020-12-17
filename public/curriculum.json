@@ -60,24 +60,23 @@
                 "list": [
                     { "description": "Web standards (HTML, CSS, JS and others)" },
                     { "description": "Web services, RESTFul and RPC (Remote Procedure Calls)" },
-                    { "description": "SOA (Service Oriented Architecture)" },
-                    { "description": "High Performance in the Web Platform" },
+                    { "description": "High Performance and Scalability in the Web Platform" },
                     { "description": "Test-Driven Development, Continuous Integration and Continuous Delivery" },
-                    { "description": "Cloud Computing (SaaS, PaaS and IaaS)" },
+                    { "description": "Cloud Computing concepts and Microservices" },
                     { "description": "Web accessibility (WCAG 2.0 and WAI-ARIA)" }
                 ]
             },
             "programming": {
                 "headline": "Programming skills",
                 "list": [
-                    { "description": "JavaScript" },
+                    { "description": "JavaScript / Node.js" },
                     { "description": "Ajax Design patterns" },
-                    { "description": "Object Oriented JavaScript" },
                     { "description": "React.js / REDUX" },
                     { "description": "PHP" },
                     { "description": "Python" },
                     { "description": "Design patterns" },
-                    { "description": "Machine learning (R or SKLEARN)" }
+                    { "description": "Machine learning (R or SKLEARN)" },
+                    { "description": "Docker" }
                 ]
             }
         },
