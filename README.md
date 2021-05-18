@@ -1,4 +1,4 @@
-[![Travis-CI build](https://api.travis-ci.org/watinha/react-homepage.svg?branch=master)](https://travis-ci.org/watinha/react-homepage)
+[![Travis-CI build](https://api.travis-ci.com/watinha/react-homepage.svg?branch=master)](https://travis-ci.com/watinha/react-homepage)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
