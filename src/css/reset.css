@@ -129,9 +129,6 @@ span.bold{
     .wrapper .layout_switcher {
         display: none;
     }
-    .header .contact {
-        display: none;
-    }
 }
 hr {
     width: 100%;
